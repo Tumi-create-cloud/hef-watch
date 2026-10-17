@@ -1,0 +1,42 @@
+name: watch
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: watch
+  cancel-in-progress: false
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Watch
+        env:
+          MATCH_CONFIG: ${{ secrets.MATCH_CONFIG }}
+          WEBHOOK_URL: ${{ secrets.HEF_WEBHOOK_URL }}
+          WEBHOOK_KEY: ${{ secrets.HEF_WEBHOOK_KEY }}
+        run: python3 watch.py --state-dir state
+      - name: Keepalive (avoid 60-day schedule disable)
+        run: |
+          age=$(( $(date +%s) - $(git log -1 --format=%ct) ))
+          if [ "$age" -gt $((25*86400)) ]; then date -u +%Y-%m-%d > state/keepalive.txt; fi
+      - name: Commit state if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state
+          if git diff --cached --quiet; then echo "no state change"; exit 0; fi
+          git commit -q -m "state update"
+          for i in 1 2 3 4 5; do
+            git push -q && exit 0
+            echo "push conflict, retry $i"; sleep $((i*3))
+            git pull -q --rebase -X theirs origin main || { git rebase --abort; git pull -q --no-rebase -X ours origin main; }
+          done
+          exit 1

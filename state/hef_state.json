@@ -1,0 +1,239 @@
+{
+ "health": {
+  "consecutive_failures": 0,
+  "last_status": "ok"
+ },
+ "listings": {
+  "albert-camusplaats-159": {
+   "address": "Albert Camusplaats 159",
+   "first_seen": "2026-10-17T11:26:16+02:00",
+   "published": "2026-10-06T12:58:31.000000Z",
+   "rent": 1015,
+   "rooms": 4,
+   "service": 0,
+   "status": "Onder optie",
+   "status_code": "unavailable",
+   "total": 1015
+  },
+  "bierstraat-113": {
+   "address": "Bierstraat 113",
+   "first_seen": "2026-10-17T11:26:16+02:00",
+   "published": "2026-10-02T06:45:31.000000Z",
+   "rent": 1274,
+   "rooms": 4,
+   "service": 107,
+   "status": "Onder optie",
+   "status_code": "unavailable",
+   "total": 1381
+  },
+  "bornerveld-206": {
+   "address": "Bornerveld 206",
+   "first_seen": "2026-10-17T11:26:16+02:00",
+   "published": "2026-09-01T11:42:52.000000Z",
+   "rent": 1135,
+   "rooms": 3,
+   "service": 48,
+   "status": "Onder optie",
+   "status_code": "unavailable",
+   "total": 1183
+  },
+  "briggemandreef-20": {
+   "address": "Briggemandreef 20",
+   "first_seen": "2026-10-17T11:26:16+02:00",
+   "published": "2026-02-17T17:43:01.000000Z",
+   "rent": 460,
+   "rooms": null,
+   "service": 0,
+   "status": "Beschikbaar",
+   "status_code": "available",
+   "total": 460
+  },
+  "briggemandreef-22": {
+   "address": "Briggemandreef 22",
+   "first_seen": "2026-10-17T11:26:16+02:00",
+   "published": "2026-06-11T10:30:16.000000Z",
+   "rent": 1776.37,
+   "rooms": null,
+   "service": 765.51,
+   "status": "Beschikbaar",
+   "status_code": "available",
+   "total": 2541.88
+  },
+  "burgemeester-brokxlaan-1960": {
+   "address": "Burgemeester Brokxlaan 1960",
+   "first_seen": "2026-10-17T11:26:16+02:00",
+   "published": "2026-10-14T08:08:30.000000Z",
+   "rent": 1230,
+   "rooms": 3,
+   "service": 69,
+   "status": "Onder optie",
+   "status_code": "unavailable",
+   "total": 1299
+  },
+  "burgemeester-brokxlaan-2064": {
+   "address": "Burgemeester Brokxlaan 2064",
+   "first_seen": "2026-10-17T11:26:16+02:00",
+   "published": "2026-10-14T07:23:09.000000Z",
+   "rent": 1134,
+   "rooms": 2,
+   "service": 69,
+   "status": "Onder optie",
+   "status_code": "unavailable",
+   "total": 1203
+  },
+  "carry-van-bruggensingel-1": {
+   "address": "Carry van Bruggensingel 1",
+   "first_seen": "2026-10-17T11:26:16+02:00",
+   "published": "2026-10-06T11:29:27.000000Z",
+   "rent": 1082,
+   "rooms": 4,
+   "service": 30,
+   "status": "Onder optie",
+   "status_code": "unavailable",
+   "total": 1112
+  },
+  "dennekruid-31": {
+   "address": "Dennekruid 31",
+   "first_seen": "2026-10-17T11:26:16+02:00",
+   "published": "2026-10-16T05:42:17.000000Z",
+   "rent": 1250,
+   "rooms": 5,
+   "service": 12,
+   "status": "Onder optie",
+   "status_code": "unavailable",
+   "total": 1262
+  },
+  "garagebox Boomkor 69": {
+   "address": "Garagebox Boomkor 69",
+   "first_seen": "2026-10-17T11:26:16+02:00",
+   "published": "2026-10-14T14:15:53.000000Z",
+   "rent": 155.1,
+   "rooms": null,
+   "service": 0,
+   "status": "Beschikbaar",
+   "status_code": "available",
+   "total": 155.1
+  },
+  "heemskerkstraat-5-b": {
+   "address": "Heemskerkstraat 5 B",
+   "first_seen": "2026-10-17T11:26:16+02:00",
+   "published": "2026-09-11T18:07:40.000000Z",
+   "rent": 1400,
+   "rooms": 3,
+   "service": 29,
+   "status": "Onder optie",
+   "status_code": "unavailable",
+   "total": 1429
+  },
+  "hongerlandsedijk-638": {
+   "address": "Hongerlandsedijk 638",
+   "first_seen": "2026-10-17T11:26:16+02:00",
+   "published": "2026-03-19T12:19:23.000000Z",
+   "rent": 862.5,
+   "rooms": null,
+   "service": 5,
+   "status": "Beschikbaar",
+   "status_code": "available",
+   "total": 867.5
+  },
+  "hongerlandsedijk-640": {
+   "address": "Hongerlandsedijk 640",
+   "first_seen": "2026-10-17T11:26:16+02:00",
+   "published": "2026-07-21T14:47:31.000000Z",
+   "rent": 956.25,
+   "rooms": null,
+   "service": 2.7,
+   "status": "Beschikbaar",
+   "status_code": "available",
+   "total": 958.95
+  },
+  "huigendijk-3": {
+   "address": "Huigendijk 3",
+   "first_seen": "2026-10-17T11:26:16+02:00",
+   "published": "2026-09-30T11:18:57.000000Z",
+   "rent": 960,
+   "rooms": 3,
+   "service": 12,
+   "status": "Onder optie",
+   "status_code": "unavailable",
+   "total": 972
+  },
+  "laan-op-zuid-663": {
+   "address": "Laan op Zuid 663",
+   "first_seen": "2026-10-17T11:26:16+02:00",
+   "published": "2026-10-16T09:27:15.000000Z",
+   "rent": 1166,
+   "rooms": 4,
+   "service": 54,
+   "status": "Onder optie",
+   "status_code": "unavailable",
+   "total": 1220
+  },
+  "laan-op-zuid-905": {
+   "address": "Laan op Zuid 905",
+   "first_seen": "2026-10-17T11:26:16+02:00",
+   "published": "2026-10-16T06:46:53.000000Z",
+   "rent": 1115,
+   "rooms": 3,
+   "service": 64,
+   "status": "Onder optie",
+   "status_code": "unavailable",
+   "total": 1179
+  },
+  "langenhorst-15": {
+   "address": "Garageboxen omgeving Zuidwijk/ Langenhorst",
+   "first_seen": "2026-10-17T11:26:16+02:00",
+   "published": "2026-10-02T12:39:12.000000Z",
+   "rent": 130,
+   "rooms": null,
+   "service": 0,
+   "status": "Beschikbaar",
+   "status_code": "available",
+   "total": 130
+  },
+  "park-vossendijk-427": {
+   "address": "Park Vossendijk 427",
+   "first_seen": "2026-10-17T11:26:16+02:00",
+   "published": "2026-09-10T07:12:48.000000Z",
+   "rent": 1075,
+   "rooms": null,
+   "service": 48,
+   "status": "Onder optie",
+   "status_code": "unavailable",
+   "total": 1123
+  },
+  "peur-10": {
+   "address": "Peur 10",
+   "first_seen": "2026-10-17T11:26:16+02:00",
+   "published": "2026-10-14T09:12:16.000000Z",
+   "rent": 1300,
+   "rooms": 5,
+   "service": 12,
+   "status": "Onder optie",
+   "status_code": "unavailable",
+   "total": 1312
+  },
+  "vuurplaat-274": {
+   "address": "Vuurplaat 274",
+   "first_seen": "2026-10-17T11:26:16+02:00",
+   "published": "2026-10-16T09:45:28.000000Z",
+   "rent": 1353,
+   "rooms": 4,
+   "service": 38,
+   "status": "Onder optie",
+   "status_code": "unavailable",
+   "total": 1391
+  },
+  "zwaardvisstraat-22": {
+   "address": "Zwaardvisstraat 22",
+   "first_seen": "2026-10-17T11:26:16+02:00",
+   "published": "2026-09-04T13:06:15.000000Z",
+   "rent": 1275,
+   "rooms": 3,
+   "service": 57,
+   "status": "Onder optie",
+   "status_code": "unavailable",
+   "total": 1332
+  }
+ }
+}
