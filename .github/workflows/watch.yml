@@ -3,6 +3,11 @@ on:
   schedule:
     - cron: '*/30 * * * *'   # safety net: keeps one run queued behind the active loop
   workflow_dispatch:
+    inputs:
+      loop_seconds:
+        description: 'Loop duration in seconds (default 19800 = 5.5 h)'
+        required: false
+        default: '19800'
 permissions:
   contents: write
 concurrency:
@@ -25,5 +30,5 @@ jobs:
           WEBHOOK_URL: ${{ secrets.HEF_WEBHOOK_URL }}
           WEBHOOK_KEY: ${{ secrets.HEF_WEBHOOK_KEY }}
           INTERVAL: '120'
-          LOOP_SECONDS: '19800'
+          LOOP_SECONDS: ${{ github.event.inputs.loop_seconds || '19800' }}
         run: ./loop.sh
