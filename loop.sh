@@ -34,6 +34,8 @@ while [ $SECONDS -lt $end ]; do
   printf 'iter %d %s ' "$n" "$(date -u +%H:%M:%SZ)"
   timeout 100 python3 watch.py --state-dir state || echo "warn: watch.py exit $?"
   commit_push
-  left=$(( INTERVAL - (SECONDS - t0) )); [ $left -gt 0 ] && [ $((SECONDS + left)) -lt $end ] && sleep $left
+  left=$(( INTERVAL - (SECONDS - t0) )); rem=$(( end - SECONDS ))
+  [ $left -ge $rem ] && break
+  [ $left -gt 0 ] && sleep $left
 done
 echo "loop done after $n iterations"
