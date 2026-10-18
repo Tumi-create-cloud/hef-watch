@@ -1,5 +1,5 @@
 """Shared HTTP helpers for adapters."""
-import json, time, urllib.request
+import gzip, json, time, urllib.request
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0 Safari/537.36",
@@ -16,7 +16,9 @@ def request(url, data=None, accept="text/html,application/xhtml+xml,*/*;q=0.8", 
         try:
             req = urllib.request.Request(url, data=body, headers=h, method="POST" if body else "GET")
             with urllib.request.urlopen(req, timeout=timeout) as r:
-                return r.read().decode("utf-8", "replace")
+                raw = r.read()
+                if r.headers.get("Content-Encoding", "").lower() == "gzip": raw = gzip.decompress(raw)
+                return raw.decode("utf-8", "replace")
         except Exception as e:  # noqa
             err = e
             if i < attempts - 1: time.sleep(2 * (2 ** i))
