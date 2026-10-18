@@ -340,6 +340,672 @@
    "status_code": "unavailable",
    "total": 972
   },
+  "ikwilhuren:014ec220053408f08bae934f059eea07": {
+   "address": "Paul Desmondsingel 80",
+   "bedrooms": 3,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1603,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "ikwilhuren:02ec921fc4930e733bb5d5dc1e0753db": {
+   "address": "Karl Weisbardstraat 61",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1990,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
+  },
+  "ikwilhuren:04a826b79b8baffe00c234fbe7bf53b9": {
+   "address": "Jufferhof 50K",
+   "bedrooms": 1,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1159,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
+  },
+  "ikwilhuren:04da51aca4b66649fbcfa0ecaa12c0e1": {
+   "address": "Van der Duijn van Maasdamweg 136",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1335,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
+  },
+  "ikwilhuren:04ec669ad719d7fed78771c413ec4725": {
+   "address": "Laan op Zuid 1544",
+   "bedrooms": 3,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1500,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "ikwilhuren:126a46278837381b9fa2a6ada8fc099f": {
+   "address": "John Coltranestraat 50",
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1603,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
+  },
+  "ikwilhuren:15e45370fff02a714cad92bc1ab0332e": {
+   "address": "Louis Pregerkade 442",
+   "bedrooms": 3,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1617,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
+  },
+  "ikwilhuren:2220d5926230ce9e9063ba0894512bfa": {
+   "address": "Van Oldenbarneveltplaats 16D",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1850,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "ikwilhuren:2294e1e117647009be143059cdb6639e": {
+   "address": "Van Oldenbarneveltplaats 32H",
+   "bedrooms": 3,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 2150,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "ikwilhuren:28755fe17f8bf061ccf2f5a4442c1567": {
+   "address": "Louis Pregerkade 138",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1433,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
+  },
+  "ikwilhuren:292e6711f6013a84d0502b9679a2fab0": {
+   "address": "Laan op Zuid 1204",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1750,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "ikwilhuren:29d6b38133f8e88a9d8aa2c1060cdc68": {
+   "address": "Samuel Soesmanstraat 102",
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1564,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
+  },
+  "ikwilhuren:2a9a84a1de0954d8d625b88d080944d0": {
+   "address": "Wijnhaven 77D",
+   "bedrooms": 3,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 2100,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
+  },
+  "ikwilhuren:2ac3c61563a4b5d27d8a5ca4984ff230": {
+   "address": "Wijnhaven 77C",
+   "bedrooms": 3,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 2190,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
+  },
+  "ikwilhuren:2f1aebab54d6bee8d9d9f14931c8c46c": {
+   "address": "Karl Weisbardstraat 287",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 2016,
+   "status": "Verhuurd",
+   "status_code": "verhuurd"
+  },
+  "ikwilhuren:318427acfc4768fb8e083d9887de9122": {
+   "address": "Laan Op Zuid 1607",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1586,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
+  },
+  "ikwilhuren:3680f369bf2b999cde17c1299fb22e4a": {
+   "address": "Louis Pregerkade 42",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1859,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
+  },
+  "ikwilhuren:392ccc9f20a78e14f879bd7c038b2f51": {
+   "address": "Laan van Magisch Realisme 49",
+   "bedrooms": 3,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1775,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
+  },
+  "ikwilhuren:3adf83556b01f27e1252bbba156e6789": {
+   "address": "Laan Op Zuid 1583",
+   "bedrooms": 1,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1233,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "ikwilhuren:3e97ea3dc5b3d97b89309477110ba653": {
+   "address": "Jufferhof 50S",
+   "bedrooms": 1,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1764,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "ikwilhuren:429ed786b91a8009926e4be3d47666e2": {
+   "address": "King Pleasurepad 9",
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1609,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "ikwilhuren:4807fb72036be67d0b2664ab6d76aa57": {
+   "address": "Paul Desmondsingel 112",
+   "bedrooms": 3,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1614,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "ikwilhuren:4952ed76a2b1063daefb7e844eb471dd": {
+   "address": "Jufferstraat 13F",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1574,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "ikwilhuren:4a2799d1f97ee4361e47c06f97ab6450": {
+   "address": "Backershagen 426",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1350,
+   "status": "Verhuurd",
+   "status_code": "verhuurd"
+  },
+  "ikwilhuren:4de0978eb190ecde31c167c5bb7ea690": {
+   "address": "Laan op Zuid 1496",
+   "bedrooms": 3,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1590,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
+  },
+  "ikwilhuren:520fe40183026e7f80ee0de10a390e3c": {
+   "address": "Laan Op Zuid 1497",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1822,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "ikwilhuren:583acf128ae54339780e8772a55fce7f": {
+   "address": "Oostplein 553",
+   "bedrooms": 1,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1300,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
+  },
+  "ikwilhuren:5cf657d0817bb339f80973178c6612e5": {
+   "address": "Van Oldenbarneveltplaats 16B",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1850,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "ikwilhuren:60db1e4689e0b5ad1946437f4c46df40": {
+   "address": "Van Oldenbarneveltplaats 22B",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1850,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "ikwilhuren:64044c521881506d97a60e7c2a898b29": {
+   "address": "Karl Weisbardstraat 353",
+   "bedrooms": 1,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1643,
+   "status": "Verhuurd",
+   "status_code": "verhuurd"
+  },
+  "ikwilhuren:6851161bc9a0e325d3b7e505a4e520c7": {
+   "address": "Hoge Filterweg 562",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1250,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "ikwilhuren:6e15b9e5c6fedcd9bf9c1753e6c8f195": {
+   "address": "Mia Van Ijperenplein 221",
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1593,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "ikwilhuren:6f7cf9a2745d91da5cb4d3315d95e7c8": {
+   "address": "Paul Desmondsingel 66",
+   "bedrooms": 3,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1605,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
+  },
+  "ikwilhuren:70aa51a4d6bc837f556425813c248358": {
+   "address": "Van Oldenbarneveltplaats 14C",
+   "bedrooms": 3,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 2215,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
+  },
+  "ikwilhuren:72b2200fdeb28d05ca3a8d0e6471975d": {
+   "address": "Louis Pregerkade 64",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1471,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
+  },
+  "ikwilhuren:776b0b1e6ebdd4a2ec8ac8aa317cb135": {
+   "address": "Jufferstraat 13E",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1785,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
+  },
+  "ikwilhuren:7f37cbba86c44811ab720e0c3200ff16": {
+   "address": "Samuel Soesmanstraat 116",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1802,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
+  },
+  "ikwilhuren:83bde1c929756767aea6c0c41619a6ca": {
+   "address": "Astanaplein 74",
+   "bedrooms": 1,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1450,
+   "status": "Verhuurd",
+   "status_code": "verhuurd"
+  },
+  "ikwilhuren:848c26f9260175411fdd5f4adb681743": {
+   "address": "Laan op Zuid 1352",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1825,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
+  },
+  "ikwilhuren:8c2b79e85ced7a9bd68d37e05b7ac74d": {
+   "address": "Dirkje Goedhartstraat 114",
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1688,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
+  },
+  "ikwilhuren:8d79fcee63a68933e2182f11f89f1e9d": {
+   "address": "Jufferhof 50A",
+   "bedrooms": 1,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1201,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "ikwilhuren:8e65be7fa89eb433cb382ce74f3bebc3": {
+   "address": "Diepeveenstraat 46",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1613,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
+  },
+  "ikwilhuren:8ebbc9d75b935405b4fb5c59253804f9": {
+   "address": "Astanaplein 76",
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1425,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "ikwilhuren:90781503dc5b10ee22e520f8a88d2c44": {
+   "address": "Hoge Filterweg 638",
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1200,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "ikwilhuren:90d41b17c9883ddca84cf37a62e2df12": {
+   "address": "Van Oldenbarneveltplaats 24A",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1705,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
+  },
+  "ikwilhuren:957b26e0f4e6c3a456e121baba0eb9c3": {
+   "address": "Laan op Zuid 1196",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1750,
+   "status": "Verhuurd",
+   "status_code": "verhuurd"
+  },
+  "ikwilhuren:990b148105c26208114df6e7cfc55da1": {
+   "address": "Van Oldenbarneveltplaats 14A",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1850,
+   "status": "Verhuurd",
+   "status_code": "verhuurd"
+  },
+  "ikwilhuren:9ccc247c5451494aa95932a81e6b6e8c": {
+   "address": "Laan Op Zuid 1479",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1569,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
+  },
+  "ikwilhuren:9f79c05f0f156a2cd22df2918fe13ab3": {
+   "address": "Van Oldenbarneveltplaats 18E",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1905,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
+  },
+  "ikwilhuren:9fab783820967ca9906d13f154268826": {
+   "address": "Samuel Soesmanstraat 128",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1811,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "ikwilhuren:9fee49e04f9a7fbf9c75fab995d50b9f": {
+   "address": "Laan op Zuid 1218",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1800,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
+  },
+  "ikwilhuren:a5feda9882ce2a59db44ff6f69d631d4": {
+   "address": "Jufferstraat 11H",
+   "bedrooms": 1,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1580,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
+  },
+  "ikwilhuren:a68f928ce45608d0189688b42c6cefd8": {
+   "address": "Louis Pregerkade 178",
+   "bedrooms": 3,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1591,
+   "status": "Verhuurd",
+   "status_code": "verhuurd"
+  },
+  "ikwilhuren:a816f2fbb29985b1274f80a6d1bd2bef": {
+   "address": "Louis Pregerkade 180",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1491,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
+  },
+  "ikwilhuren:ab40f9bc803e3f9a1eadccfd7a6d47ad": {
+   "address": "Stieltjesstraat 196",
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1659,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "ikwilhuren:b41fca8114f46439ef0005a312956154": {
+   "address": "Louis Pregerkade 476",
+   "bedrooms": 3,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1675,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "ikwilhuren:bdaf9b9a037dff2434f41c9b6c3c3d4f": {
+   "address": "Karl Weisbardstraat 107",
+   "bedrooms": 1,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1580,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
+  },
+  "ikwilhuren:bed12122813c7857c1ca15df76fd429d": {
+   "address": "Hoornsingel 1F",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1450,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "ikwilhuren:c2042ff9733e9c80a91835100cecf236": {
+   "address": "Diepeveenstraat 50",
+   "bedrooms": 1,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1324,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "ikwilhuren:c21c1742f8e5c1761d662f718c4740be": {
+   "address": "Karl Weisbardstraat 139",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1801,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
+  },
+  "ikwilhuren:c2486386c4c62e4dca400d7eb60f6025": {
+   "address": "Karl Weisbardstraat 51",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1990,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
+  },
+  "ikwilhuren:c29c20ae8c4aa489389dfaaf33780a87": {
+   "address": "Backershagen 384",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1350,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
+  },
+  "ikwilhuren:c3c728db96f8af0a911dd07733e36a20": {
+   "address": "Cypruslaan 129",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1875,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
+  },
+  "ikwilhuren:c5a18068d147ceab047eb090f43bd77b": {
+   "address": "Oostplein 519",
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1581,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "ikwilhuren:ca1d66782372849ea08ec95347890552": {
+   "address": "Jufferstraat 13D",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1922,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "ikwilhuren:cdacb9f98dd0da490a8a4f6dae1c7b24": {
+   "address": "Hillelaan 153",
+   "bedrooms": 1,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1440,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "ikwilhuren:dd8f7475313d97153f4383291b208214": {
+   "address": "Boezemlaan 51H",
+   "bedrooms": 3,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1665,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
+  },
+  "ikwilhuren:e36cbce311f86963776a61fb5c328374": {
+   "address": "Van Der Hoevenplein 297",
+   "bedrooms": 1,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1520,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
+  },
+  "ikwilhuren:e4ab4b76e1d9c63974ba0bdb527a1a2a": {
+   "address": "Van Der Hoevenplein 325",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1670,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "ikwilhuren:e77acf671b29fef8ba0140e6f3a274ee": {
+   "address": "Louis Pregerkade 162",
+   "bedrooms": 3,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1492,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
+  },
+  "ikwilhuren:e84c5af805e32d7771399fad0e136b22": {
+   "address": "Van Oldenbarneveltplaats 14K",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1990,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
+  },
+  "ikwilhuren:ec03928dfbda98a3e20d7dc1ca676dd0": {
+   "address": "Lenny Tristanostraat 15",
+   "bedrooms": 3,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1609,
+   "status": "Verhuurd",
+   "status_code": "verhuurd"
+  },
+  "ikwilhuren:ece9f73968886d698bb8bfd28058b534": {
+   "address": "Karl Weisbardstraat 337",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 2004,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
+  },
+  "ikwilhuren:f9b0327dd0555a6f6b8a1c58c15f2ffd": {
+   "address": "Laan op Zuid 1510",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1430,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
+  },
+  "ikwilhuren:fb26b54ef5aa02de3b3bbbdf5dc727c9": {
+   "address": "Van Oldenbarneveltplaats 28J",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:53:36+02:00",
+   "p": "ikwilhuren",
+   "rent": 1890,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
+  },
   "laan-op-zuid-663": {
    "address": "Laan op Zuid 663",
    "bedrooms": 3,
@@ -1028,6 +1694,10 @@
    "consecutive_failures": 0,
    "last_status": "ok"
   },
+  "ikwilhuren": {
+   "consecutive_failures": 0,
+   "last_status": "ok"
+  },
   "schep": {
    "consecutive_failures": 0,
    "last_status": "ok"
@@ -1040,6 +1710,7 @@
  "seeded": [
   "athome",
   "hef",
+  "ikwilhuren",
   "schep",
   "vbt"
  ]
