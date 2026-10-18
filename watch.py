@@ -1,27 +1,22 @@
 #!/usr/bin/env python3
-"""Generic rental-listing watcher.
+"""Generic rental-listing watcher over several platform adapters (see adapters/).
 
-Fetches a server-rendered listing overview, parses the embedded Nuxt payload (sandboxed node `vm`,
-fallback: HTML cards), diffs against state/, and POSTs relevant events to a webhook.
-
-Env: MATCH_CONFIG (JSON, required), WEBHOOK_URL, WEBHOOK_KEY (Bearer), SOURCE_URL (optional).
+Each check: fetch due platforms in parallel, diff against state/, POST relevant events to a webhook.
+Env: MATCH_CONFIG (JSON, required), WEBHOOK_URL, WEBHOOK_KEY (Bearer).
 Logs only counts; no listing details or criteria are printed.
 """
-import argparse, datetime as dt, html as htmlmod, json, math, os, re, subprocess, sys, time
+import argparse, datetime as dt, json, math, os, sys, time
 import urllib.request, urllib.error
+from concurrent.futures import ThreadPoolExecutor
 from zoneinfo import ZoneInfo
+from adapters import ADAPTERS
 
 TZ = ZoneInfo("Europe/Amsterdam")
-URL = os.environ.get("SOURCE_URL") or "https://huuraanbod.hefwonen.nl/huuraanbod"
-HEADERS = {
-    "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/129.0 Safari/537.36",
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-    "Accept-Language": "nl-NL,nl;q=0.9,en;q=0.8", "Cache-Control": "no-cache",
-}
 RELEVANT = {"NEW", "STATUS_CHANGE", "PRICE_CHANGE", "REAPPEARED"}
 REMIND_EVERY = dt.timedelta(minutes=30)
 REMIND_WINDOW = (dt.time(7, 0), dt.time(23, 30))
 MAX_OUTBOX = 30
+STORED = ("status", "status_code", "rent", "service", "total", "address", "rooms", "bedrooms", "published")
 
 def now():
     return dt.datetime.now(TZ).replace(microsecond=0)
@@ -41,84 +36,12 @@ def save_json(p, obj):
 def load_config():
     c = json.loads(os.environ["MATCH_CONFIG"])
     low = lambda xs: {s.strip().lower() for s in xs}
+    mx = c.get("max_total", 10**9)
     return {"match": low(c.get("match_streets", [])), "twijfel": low(c.get("twijfel_streets", [])),
             "pc": tuple(c.get("postcode_prefixes", [])), "radius": c.get("radius_m", 0),
             "refs": [tuple(p) for p in c.get("ref_points", [])], "min_rooms": c.get("min_rooms", 0),
-            "max_total": c.get("max_total", 10**9), "city": (c.get("city") or "").lower(),
-            "housing_only": c.get("housing_only", True)}
-
-# ---------- fetch / parse ----------
-def fetch(url, attempts=3, timeout=20):
-    err = None
-    for i in range(attempts):
-        try:
-            with urllib.request.urlopen(urllib.request.Request(url, headers=HEADERS), timeout=timeout) as r:
-                return r.read().decode("utf-8", "replace")
-        except Exception as e:  # noqa
-            err = e
-            if i < attempts - 1: time.sleep(2 * (2 ** i))
-    raise RuntimeError(f"fetch failed after {attempts} attempts: {type(err).__name__}: {err}")
-
-NODE_JS = r"""
-const vm=require('vm');let src='';process.stdin.on('data',d=>src+=d).on('end',()=>{
- const ctx={window:{}};vm.createContext(ctx);
- vm.runInContext(src,ctx,{timeout:2000});
- const s=ctx.window.__NUXT__.state;
- process.stdout.write(JSON.stringify({rent:s.rent||[],bog:s.bog||[],park:s.park||[]}));});
-"""
-
-def parse_payload(page):
-    i = page.find("window.__NUXT__")
-    if i < 0: raise ValueError("Nuxt payload marker missing")
-    js = page[i:page.find("</script>", i)]
-    p = subprocess.run(["node", "-e", NODE_JS], input=js, capture_output=True, text=True, timeout=15)
-    if p.returncode != 0: raise ValueError("node eval failed: " + p.stderr[-300:])
-    out = []
-    for cat, items in json.loads(p.stdout).items():
-        for x in items:
-            if not isinstance(x, dict) or not x.get("slug"): continue
-            a = x.get("address") or {}; h = x.get("handover") or {}; ch = x.get("characteristic") or {}
-            lay = ch.get("layout") or {}; st = x.get("status") or {}
-            rent = h.get("price"); svc = h.get("service_costs") or 0
-            out.append({"slug": x["slug"], "category": cat, "address": x.get("title"),
-                        "street": a.get("street"), "postcode": a.get("postal_code"),
-                        "city": (a.get("location") or "").title() or None,
-                        "lat": a.get("position_lat"), "lon": a.get("position_long"),
-                        "type": ch.get("type"), "rooms": lay.get("number_of_rooms") or None,
-                        "m2": ch.get("living_area"), "rent": rent, "service": svc,
-                        "total": (rent + svc) if isinstance(rent, (int, float)) else None,
-                        "status": st.get("label"), "status_code": st.get("code"),
-                        "energy_label": ch.get("energy_label"), "published": x.get("published_at_date"),
-                        "available": x.get("available_at_label"),
-                        "inquiries": (x.get("statistics") or {}).get("inquiries"),
-                        "url": f"{URL}/{x['slug']}"})
-    return out, "nuxt_payload"
-
-def _num(s):
-    s = re.sub(r"[^\d,]", "", s or "").replace(",", ".")
-    try: return float(s) if "." in s else int(s)
-    except ValueError: return None
-
-def parse_cards(page):
-    out = []
-    for card in page.split('class="property"')[1:]:
-        m = re.search(r'href="/huuraanbod/([^"]+)"', card)
-        if not m: continue
-        t = lambda pat: (lambda r: htmlmod.unescape(r.group(1)).strip() if r else None)(re.search(pat, card, re.S))
-        title = t(r'property__title[^>]*>([^<]+)<')
-        loc = re.search(r'property__location[^>]*><span[^>]*>([^<]*)</span><span[^>]*>([^<]*)<', card)
-        pr = {k.strip(): _num(v) for k, v in re.findall(r'<span[^>]*>([^<]+)</span><span class="highlighted[^>]*>([^<]+)<', card)}
-        m2 = re.search(r'>(\d+)\s*m²<', card); rooms = re.search(r'details__rooms.*?<span[^>]*>(\d+)', card, re.S)
-        rent = pr.get("Huurprijs p.m."); svc = pr.get("Servicekosten p.m.") or 0
-        out.append({"slug": m.group(1), "category": "rent?", "address": title,
-                    "street": re.sub(r"\s+\d.*$", "", title or "") or None,
-                    "postcode": loc.group(1).strip(" ,") if loc else None,
-                    "city": loc.group(2).strip().title() if loc else None, "lat": None, "lon": None,
-                    "rooms": int(rooms.group(1)) if rooms else None, "m2": int(m2.group(1)) if m2 else None,
-                    "rent": rent, "service": svc, "total": rent + svc if rent else None,
-                    "status": t(r'property__label"[^>]*>([^<]+)<') or "Beschikbaar?", "status_code": None,
-                    "url": f"{URL}/{m.group(1)}"})
-    return out, "html_cards_fallback"
+            "max_total": mx, "excl_twijfel": c.get("twijfel_rent_excl_above", mx - 100),
+            "city": (c.get("city") or "").lower(), "housing_only": c.get("housing_only", True)}
 
 # ---------- matching ----------
 def dist_m(a, b):
@@ -140,82 +63,115 @@ def match(l, c):
         why = f"locatie twijfel ({l.get('street')}, {l.get('postcode')}" + (f", {int(near)} m)" if near else ")")
     else:
         return "no", ["buiten zoekgebied"]
-    reasons = [why]; r, tot = l.get("rooms"), l.get("total")
+    reasons = [why]
+    r, b = l.get("rooms"), l.get("bedrooms")
+    if b is not None and b >= 2: r = max(r or 0, 3)          # >=2 bedrooms counts as >=3 rooms
+    elif r is None and b == 1: r = 2
     if r is None: level = "twijfel"; reasons.append("kamers onbekend")
     elif r < c["min_rooms"]: return "no", reasons + [f"{r} kamers"]
-    if tot is None: level = "twijfel"; reasons.append("prijs onbekend")
+    rent, tot = l.get("rent"), l.get("total")
+    if l.get("service") is None and rent is not None:          # price excl. unknown service costs
+        if rent > c["max_total"]: return "no", reasons + [f"kale huur €{rent} > €{c['max_total']}"]
+        reasons.append("servicekosten onbekend")
+        if rent > c["excl_twijfel"]: level = "twijfel"
+    elif tot is None: level = "twijfel"; reasons.append("prijs onbekend")
     elif tot > c["max_total"]: return "no", reasons + [f"totaal €{tot} > €{c['max_total']}"]
     return level, reasons
 
 def available(s):
     return (s or "").lower() in ("available", "beschikbaar")
 
-def ev(kind, l, lvl, reasons, note):
-    keys = ("slug", "url", "address", "postcode", "rooms", "m2", "rent", "service", "total", "status",
-            "published", "available", "inquiries", "energy_label", "category")
-    d = {"type": kind, "match": lvl}; d.update({k: l.get(k) for k in keys})
+def ev(kind, l, lvl, reasons, note, platform):
+    keys = ("slug", "url", "address", "postcode", "city", "rooms", "bedrooms", "m2", "rent", "service", "total",
+            "status", "published", "available", "inquiries", "energy_label", "category")
+    d = {"type": kind, "platform": platform, "match": lvl}; d.update({k: l.get(k) for k in keys})
     d["match_reasons"] = reasons; d["note"] = note
     return d
 
-# ---------- watch (state diff) ----------
-def watch(state_path, html_file, cfg):
-    t0 = time.time(); ts = now().isoformat()
-    st = load_json(state_path, None); first_run = st is None
-    st = st or {"listings": {}, "health": {"consecutive_failures": 0}}
-    health = st.setdefault("health", {"consecutive_failures": 0})
-    events, listings, source, err = [], [], None, None
+# ---------- state ----------
+def migrate(st):
+    st.setdefault("listings", {})
+    ph = st.setdefault("platform_health", {})
+    if "health" in st: ph["hef"] = st.pop("health")
+    seeded = st.setdefault("seeded", [])
+    if "hef" not in seeded and st["listings"]: seeded.append("hef")
+    for p in st["listings"].values(): p.setdefault("p", "hef")
+    return st
+
+def run_platform(ad):
+    t0 = time.time()
     try:
-        page = open(html_file).read() if html_file else fetch(URL)
-        missing = [m for m in ("window.__NUXT__", "property__title", "/huuraanbod/") if m not in page]
-        try: listings, source = parse_payload(page)
-        except Exception as e:
-            listings, source = parse_cards(page); missing.append(f"payload: {e}")
+        listings, source, partial, warn = ad.fetch()
         if not listings: raise ValueError("0 listings parsed")
-        if missing: err = "structuur gewijzigd? ontbreekt: " + "; ".join(missing)
+        return ad, listings, source, partial, ("structuur gewijzigd? " + "; ".join(warn)) if warn else None, round(time.time() - t0, 2)
     except Exception as e:
-        err = str(e)
-    prev_fail = health.get("consecutive_failures", 0); fatal = not listings
-    if err:
-        health["consecutive_failures"] = prev_fail + 1; hstat = "error"
-        events.append({"type": "HEALTH", "match": None, "first_failure": prev_fail == 0, "note": err, "fatal": fatal})
-        health["last_error"] = err
-    else:
-        health["consecutive_failures"] = 0; hstat = "ok"
-        if prev_fail: events.append({"type": "HEALTH_RECOVERED", "match": None, "note": f"hersteld na {prev_fail} fouten"})
-    health.pop("last_check", None); health["last_status"] = hstat
-    if listings:
+        return ad, [], None, False, str(e)[:300], round(time.time() - t0, 2)
+
+def watch(state_path, runtime_path, cfg, only=None, force=False):
+    ts = now().isoformat()
+    st = load_json(state_path, None)
+    st = migrate(st or {"listings": {}})
+    rt = load_json(runtime_path, {})          # not committed: last fetch per platform (this runner only)
+    t = time.time()
+    due = [a for a in ADAPTERS if (not only or a.KEY in only) and
+           (force or t - rt.get(a.KEY, 0) >= a.EVERY_S - 20)]
+    with ThreadPoolExecutor(max_workers=len(due) or 1) as ex:
+        results = list(ex.map(run_platform, due))
+    events, summary = [], {}
+    for ad, listings, source, partial, err, secs in results:
+        rt[ad.KEY] = t
+        h = st["platform_health"].setdefault(ad.KEY, {"consecutive_failures": 0})
+        prev = h.get("consecutive_failures", 0)
+        if err:
+            h["consecutive_failures"] = prev + 1; h["last_status"] = "error"; h["last_error"] = err
+            events.append({"type": "HEALTH", "platform": ad.NAME, "match": None, "first_failure": prev == 0,
+                           "note": f"{ad.NAME}: {err}", "fatal": not listings})
+        else:
+            h["consecutive_failures"] = 0; h["last_status"] = "ok"
+            if prev: events.append({"type": "HEALTH_RECOVERED", "platform": ad.NAME, "match": None,
+                                    "note": f"{ad.NAME}: hersteld na {prev} fouten"})
+        summary[ad.KEY] = {"n": len(listings), "src": source, "ok": not err, "s": secs}
+        if not listings: continue
+        first = ad.KEY not in st["seeded"]
         known = st["listings"]; cur = set()
         for l in listings:
             s = l["slug"]; cur.add(s); lvl, why = match(l, cfg); p = known.get(s)
             if p is None:
-                if not first_run:
-                    note = "nieuw en beschikbaar" if available(l.get("status_code") or l.get("status")) else "nieuw, al onder optie"
-                    events.append(ev("NEW", l, lvl, why, note))
-                p = known[s] = {"first_seen": ts}
+                if not first:
+                    note = "nieuw en beschikbaar" if available(l.get("status_code") or l.get("status")) else "nieuw, niet beschikbaar"
+                    events.append(ev("NEW", l, lvl, why, note, ad.NAME))
+                p = known[s] = {"first_seen": ts, "p": ad.KEY}
             else:
                 if p.get("removed"):
-                    events.append(ev("REAPPEARED", l, lvl, why, "weer op de site")); p.pop("removed", None)
+                    events.append(ev("REAPPEARED", l, lvl, why, "weer op de site", ad.NAME)); p.pop("removed", None)
                 if p.get("status") != l.get("status"):
                     second = available(l.get("status_code") or l.get("status")) and not available(p.get("status_code") or p.get("status"))
                     events.append(ev("STATUS_CHANGE", l, lvl, why,
-                                     f"{p.get('status')} -> {l.get('status')}" + (" (tweede kans!)" if second else "")))
+                                     f"{p.get('status')} -> {l.get('status')}" + (" (tweede kans!)" if second else ""), ad.NAME))
                 if p.get("total") is not None and l.get("total") is not None and p.get("total") != l.get("total"):
-                    events.append(ev("PRICE_CHANGE", l, lvl, why, f"totaal €{p.get('total')} -> €{l.get('total')}"))
-            for k in ("last_seen", "match"): p.pop(k, None)   # volatile / criteria-revealing: not stored
-            p.update({k: l.get(k) for k in ("status", "status_code", "rent", "service", "total", "address", "rooms", "published")})
-            p["_lvl"] = lvl  # in-memory only, stripped before save
-        if source != "html_cards_fallback":
+                    events.append(ev("PRICE_CHANGE", l, lvl, why, f"totaal €{p.get('total')} -> €{l.get('total')}", ad.NAME))
+                elif p.get("service") is None and l.get("service") is None and p.get("rent") is not None \
+                        and l.get("rent") is not None and p.get("rent") != l.get("rent"):
+                    events.append(ev("PRICE_CHANGE", l, lvl, why, f"huur €{p.get('rent')} -> €{l.get('rent')}", ad.NAME))
+            for k in ("last_seen", "match"): p.pop(k, None)
+            for k in STORED:
+                if l.get(k) is not None or k in p: p[k] = l.get(k)
+        if first: st["seeded"].append(ad.KEY); summary[ad.KEY]["seeded"] = True
+        if not partial:
             for s, p in known.items():
-                if s not in cur and not p.get("removed"):
+                if p.get("p") == ad.KEY and s not in cur and not p.get("removed"):
                     p["removed"] = ts
-                    events.append({"type": "REMOVED", "match": None, "slug": s, "address": p.get("address"), "note": "niet meer op de site"})
-        for p in known.values(): p.pop("_lvl", None)
-    out = {"ok": not fatal and not err, "checked_at": ts, "source": source, "first_run_seeded": first_run and bool(listings),
-           "listing_count": len(listings), "woning_count": sum(1 for l in listings if l.get("category") in ("rent", "rent?")),
-           "events": events, "health": {"status": "recovered" if (not err and prev_fail) else hstat,
-                                        "consecutive_failures": health["consecutive_failures"], "message": err or "ok"},
-           "elapsed_s": round(time.time() - t0, 2)}
-    return st, out
+                    events.append({"type": "REMOVED", "platform": ad.NAME, "match": None, "slug": s,
+                                   "address": p.get("address"), "note": "niet meer op de site"})
+    st["seeded"].sort()
+    ok = all(v["ok"] for v in summary.values())
+    hef = summary.get("hef", {})
+    out = {"ok": ok, "checked_at": ts, "platforms": summary, "events": events,
+           "listing_count": sum(v["n"] for v in summary.values()),
+           "health": {"status": "ok" if ok else "error",
+                      "failing": [k for k, v in st["platform_health"].items() if v.get("consecutive_failures")]},
+           "source": hef.get("src"), "woning_count": hef.get("n")}
+    return st, rt, out
 
 # ---------- dispatch ----------
 def post(url, key, payload):
@@ -232,28 +188,43 @@ def pending_items(p):
     if isinstance(raw, dict): raw = raw.get("items", raw.get("pending", list(raw.values())))
     return [x for x in raw if x] if isinstance(raw, list) else []
 
+def report(state_dir, cfg):
+    """Local use only: print current match/twijfel listings of all platforms (fetches everything)."""
+    rows = []
+    for ad, listings, source, partial, err, secs in map(run_platform, ADAPTERS):
+        print(f"# {ad.NAME}: {len(listings)} listings, src={source}, err={err}", file=sys.stderr)
+        for l in listings:
+            lvl, why = match(l, cfg)
+            if lvl != "no": rows.append({"platform": ad.NAME, "match": lvl, "why": why, **{k: l.get(k) for k in
+                                         ("address", "city", "rooms", "bedrooms", "m2", "rent", "service", "total", "status", "url")}})
+    print(json.dumps(rows, ensure_ascii=False, indent=1))
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--state-dir", default="state"); ap.add_argument("--html")
+    ap.add_argument("--state-dir", default="state"); ap.add_argument("--only", help="comma list of platform keys")
+    ap.add_argument("--force", action="store_true", help="fetch all platforms regardless of interval")
     ap.add_argument("--now"); ap.add_argument("--no-post", action="store_true")
+    ap.add_argument("--report", action="store_true")
     a = ap.parse_args()
     sp = lambda n: os.path.join(a.state_dir, n)
+    if a.report: report(a.state_dir, load_config()); return 0
     url = (os.environ.get("WEBHOOK_URL") or "").strip(); key = (os.environ.get("WEBHOOK_KEY") or "").strip()
     if key.lower().startswith("bearer "): key = key[7:].strip()
     t = dt.datetime.fromisoformat(a.now).astimezone(TZ) if a.now else now()
     ds = load_json(sp("dispatch_state.json"), {}); outbox = ds.get("outbox", [])
-    events = []
+    events, out = [], {}
     try:
         cfg = load_config()
-        st, out = watch(sp("hef_state.json"), a.html, cfg)
-        save_json(sp("hef_state.json"), st)
+        st, rt, out = watch(sp("hef_state.json"), sp(".runtime.json"), cfg,
+                            only=set(a.only.split(",")) if a.only else None, force=a.force)
+        save_json(sp("hef_state.json"), st); save_json(sp(".runtime.json"), rt)
         if ds.pop("crashing", False):
-            events.append({"type": "HEALTH_RECOVERED", "match": None, "note": "watcher draait weer"})
+            events.append({"type": "HEALTH_RECOVERED", "platform": "watcher", "match": None, "note": "watcher draait weer"})
     except Exception as e:
         out = {"ok": False, "events": [], "health": {"status": "error", "message": type(e).__name__}}
         if not ds.get("crashing"):
-            events.append({"type": "HEALTH", "match": None, "first_failure": True, "fatal": True,
-                           "note": f"watcher crashte: {type(e).__name__}"})
+            events.append({"type": "HEALTH", "platform": "watcher", "match": None, "first_failure": True, "fatal": True,
+                           "note": f"watcher crashte: {type(e).__name__}: {str(e)[:200]}"})
         ds["crashing"] = True
     for e in out.get("events", []):
         k = e.get("type")
@@ -274,9 +245,9 @@ def main():
         reasons.append("REMINDER"); ds["last_reminder"] = t.isoformat()
     if reasons:
         outbox.append({"reason": "+".join(reasons), "test": False, "sent_at": t.isoformat(), "ok": out.get("ok"),
-                       "checked_at": out.get("checked_at"), "source": out.get("source"),
-                       "listing_count": out.get("listing_count"), "woning_count": out.get("woning_count"),
-                       "health": out.get("health"), "pending_count": len(pend), "events": events})
+                       "checked_at": out.get("checked_at"), "platforms": out.get("platforms"),
+                       "listing_count": out.get("listing_count"), "health": out.get("health"),
+                       "pending_count": len(pend), "events": events})
     outbox = outbox[-MAX_OUTBOX:]
     results = []
     if a.no_post:
@@ -292,10 +263,8 @@ def main():
     save_json(sp("dispatch_state.json"), ds)
     types = {}
     for e in out.get("events", []): types[e["type"]] = types.get(e["type"], 0) + 1
-    print(json.dumps({"ok": out.get("ok"), "listing_count": out.get("listing_count"), "source": out.get("source"),
-                      "raw_event_types": types, "sent_reasons": reasons, "post_results": results,
-                      "outbox_left": len(outbox), "health": (out.get("health") or {}).get("status"),
-                      "elapsed_s": out.get("elapsed_s")}))
+    print(json.dumps({"ok": out.get("ok"), "platforms": out.get("platforms"), "raw_event_types": types,
+                      "sent_reasons": reasons, "post_results": results, "outbox_left": len(outbox)}))
     if a.no_post and reasons and os.environ.get("PRINT_PAYLOAD"):
         print(json.dumps(outbox[-1], ensure_ascii=False))
     return 0
