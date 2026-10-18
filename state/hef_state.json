@@ -1662,6 +1662,598 @@
    "status_code": "rentreserved",
    "total": 1867
   },
+  "vesteda:10786": {
+   "address": "Bottelroos 23",
+   "bedrooms": 4,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1655.0,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "rented_reserved"
+  },
+  "vesteda:10853": {
+   "address": "Bottelroos 81",
+   "bedrooms": 4,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1605.0,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "vesteda:10885": {
+   "address": "Damastroos 27",
+   "bedrooms": 4,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1670.0,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "vesteda:11069": {
+   "address": "Van Der Hoevenplein 109",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1975.0,
+   "status": "Gereserveerd",
+   "status_code": "reserved"
+  },
+  "vesteda:11567": {
+   "address": "Van Der Hoevenplein 96",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 2135.0,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "rented_reserved"
+  },
+  "vesteda:11571": {
+   "address": "Van Der Hoevenplein 117",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1975.0,
+   "status": "Verhuurd",
+   "status_code": "rented"
+  },
+  "vesteda:11593": {
+   "address": "Van Der Hoevenplein 216",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 2170.0,
+   "status": "Gereserveerd",
+   "status_code": "reserved"
+  },
+  "vesteda:12090": {
+   "address": "Clazina Kouwenbergzoom 232",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1680.0,
+   "status": "Gereserveerd",
+   "status_code": "reserved"
+  },
+  "vesteda:12124": {
+   "address": "Damastroos 63",
+   "bedrooms": 4,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1580.0,
+   "status": "Gereserveerd",
+   "status_code": "reserved"
+  },
+  "vesteda:12406": {
+   "address": "Clazina Kouwenbergzoom 210",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1680.0,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "vesteda:148304": {
+   "address": "Albertina Sisulupad 172",
+   "bedrooms": 1,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1166.27,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "vesteda:15740": {
+   "address": "Clazina Kouwenbergzoom 230",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1680.0,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "vesteda:17092": {
+   "address": "Buitenbassinweg 320",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1450.0,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "vesteda:17097": {
+   "address": "Buitenbassinweg 358",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1180.01,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "rented_reserved"
+  },
+  "vesteda:17102": {
+   "address": "Buitenbassinweg 426",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1425.0,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "rented_reserved"
+  },
+  "vesteda:17138": {
+   "address": "Buitenbassinweg 510",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1415.0,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "rented_reserved"
+  },
+  "vesteda:1755": {
+   "address": "Linker Rottekade 513",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1200.61,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "rented_reserved"
+  },
+  "vesteda:1762": {
+   "address": "Linker Rottekade 539",
+   "bedrooms": 1,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1001.5,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "rented_reserved"
+  },
+  "vesteda:180632": {
+   "address": "Grote Beer 3 J-01",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1033.72,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "rented_reserved"
+  },
+  "vesteda:180701": {
+   "address": "Laan Op Zuid 1846",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1985.0,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "vesteda:180702": {
+   "address": "Laan Op Zuid 1840",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1885.0,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "vesteda:180851": {
+   "address": "Laan Op Zuid 1894",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1985.0,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "vesteda:181003": {
+   "address": "Familie Van Der Leerstraat 121",
+   "bedrooms": 1,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1445.0,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "vesteda:181072": {
+   "address": "Grote Beer 9 F-12",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1780.0,
+   "status": "Verhuurd",
+   "status_code": "rented"
+  },
+  "vesteda:182069": {
+   "address": "Laan Op Zuid 1758",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1450.0,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "rented_reserved"
+  },
+  "vesteda:182079": {
+   "address": "Albertina Sisulupad 146",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1630.0,
+   "status": "Gereserveerd",
+   "status_code": "reserved"
+  },
+  "vesteda:1833": {
+   "address": "Admiraal De Ruyterweg 135",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1152.55,
+   "status": "Gereserveerd",
+   "status_code": "reserved"
+  },
+  "vesteda:1841": {
+   "address": "Admiraal De Ruyterweg 199",
+   "bedrooms": 1,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 987.78,
+   "status": "Verhuurd",
+   "status_code": "rented"
+  },
+  "vesteda:1843": {
+   "address": "Admiraal De Ruyterweg 221",
+   "bedrooms": 3,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1640.0,
+   "status": "Gereserveerd",
+   "status_code": "reserved"
+  },
+  "vesteda:1845": {
+   "address": "Admiraal De Ruyterweg 229",
+   "bedrooms": 1,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 884.79,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "rented_reserved"
+  },
+  "vesteda:1848": {
+   "address": "Admiraal De Ruyterweg 247",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1118.23,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "rented_reserved"
+  },
+  "vesteda:185988": {
+   "address": "Albertina Sisulupad 4",
+   "bedrooms": 1,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1023.0,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "vesteda:185989": {
+   "address": "Albertina Sisulupad 70",
+   "bedrooms": 1,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1060.0,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "vesteda:186080": {
+   "address": "Grote Beer 13 A-17",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1715.0,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "rented_reserved"
+  },
+  "vesteda:19781": {
+   "address": "Maashavenkade 3",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1650.0,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "vesteda:2186": {
+   "address": "Linker Rottekade 492",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1214.31,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "rented_reserved"
+  },
+  "vesteda:2208": {
+   "address": "Admiraal De Ruyterweg 125",
+   "bedrooms": 1,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1015.22,
+   "status": "Verhuurd",
+   "status_code": "rented"
+  },
+  "vesteda:33194": {
+   "address": "Zalmstraat 19",
+   "bedrooms": 1,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1780.0,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "vesteda:33214": {
+   "address": "Zalmstraat 59",
+   "bedrooms": 1,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1455.0,
+   "status": "Gereserveerd",
+   "status_code": "reserved"
+  },
+  "vesteda:33220": {
+   "address": "Zalmstraat 71",
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1505.0,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "rented_reserved"
+  },
+  "vesteda:33241": {
+   "address": "Zalmstraat 113",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1745.0,
+   "status": "Gereserveerd",
+   "status_code": "reserved"
+  },
+  "vesteda:33261": {
+   "address": "Zalmstraat 153",
+   "bedrooms": 1,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1835.0,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "vesteda:33263": {
+   "address": "Zalmstraat 157",
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1600.0,
+   "status": "Gereserveerd",
+   "status_code": "reserved"
+  },
+  "vesteda:3459": {
+   "address": "Watertorenweg 411",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1520.0,
+   "status": "Gereserveerd",
+   "status_code": "reserved"
+  },
+  "vesteda:3646": {
+   "address": "Nieuwehaven 32",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1570.0,
+   "status": "Gereserveerd",
+   "status_code": "reserved"
+  },
+  "vesteda:3685": {
+   "address": "Watertorenweg 511",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1460.0,
+   "status": "Verhuurd",
+   "status_code": "rented"
+  },
+  "vesteda:38264": {
+   "address": "V.o.c.-plein 67",
+   "bedrooms": 3,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1955.0,
+   "status": "Gereserveerd",
+   "status_code": "reserved"
+  },
+  "vesteda:38270": {
+   "address": "V.o.c.-plein 73",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1415.0,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "vesteda:3969": {
+   "address": "Watertorenweg 589",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1186.84,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "vesteda:4031": {
+   "address": "Linker Rottekade 467",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1200.61,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "rented_reserved"
+  },
+  "vesteda:4098": {
+   "address": "Gedempte Zalmhaven 71",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1895.0,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "vesteda:4177": {
+   "address": "Nieuwehaven 158",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1570.0,
+   "status": "Gereserveerd",
+   "status_code": "reserved"
+  },
+  "vesteda:4206": {
+   "address": "Gedempte Zalmhaven 251",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 2080.0,
+   "status": "Gereserveerd",
+   "status_code": "reserved"
+  },
+  "vesteda:4290": {
+   "address": "Admiraal De Ruyterweg 183",
+   "bedrooms": 1,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 946.61,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "rented_reserved"
+  },
+  "vesteda:5777": {
+   "address": "Grotemarkt 196",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1620.0,
+   "status": "Verhuurd",
+   "status_code": "rented"
+  },
+  "vesteda:5823": {
+   "address": "Verlengde Nieuwstraat 105",
+   "bedrooms": 1,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1965.0,
+   "status": "Gereserveerd",
+   "status_code": "reserved"
+  },
+  "vesteda:6671": {
+   "address": "Nieuwehaven 112",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1560.0,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "vesteda:7030": {
+   "address": "Gedempte Zalmhaven 311",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 2130.0,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "vesteda:7096": {
+   "address": "De Monchyplein 26",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1860.0,
+   "status": "Gereserveerd",
+   "status_code": "reserved"
+  },
+  "vesteda:7365": {
+   "address": "De Monchyplein 32",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1860.0,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "vesteda:7366": {
+   "address": "De Monchyplein 37",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1860.0,
+   "status": "Gereserveerd",
+   "status_code": "reserved"
+  },
+  "vesteda:9500": {
+   "address": "Van Der Hoevenplein 70",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 2205.0,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "vesteda:9502": {
+   "address": "Van Der Hoevenplein 71",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 1910.0,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "rented_reserved"
+  },
+  "vesteda:9511": {
+   "address": "De Monchyplein 40",
+   "bedrooms": 3,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 2235.0,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "vesteda:9514": {
+   "address": "De Monchyplein 52",
+   "bedrooms": 3,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 2262.0,
+   "status": "Te huur",
+   "status_code": "available"
+  },
+  "vesteda:9538": {
+   "address": "Van Der Hoevenplein 236",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T17:15:35+02:00",
+   "p": "vesteda",
+   "rent": 3150.0,
+   "status": "Te huur",
+   "status_code": "available"
+  },
   "vuurplaat-274": {
    "address": "Vuurplaat 274",
    "bedrooms": 3,
@@ -1709,6 +2301,10 @@
   "vbt": {
    "consecutive_failures": 0,
    "last_status": "ok"
+  },
+  "vesteda": {
+   "consecutive_failures": 0,
+   "last_status": "ok"
   }
  },
  "seeded": [
@@ -1716,6 +2312,7 @@
   "hef",
   "ikwilhuren",
   "schep",
-  "vbt"
+  "vbt",
+  "vesteda"
  ]
 }
