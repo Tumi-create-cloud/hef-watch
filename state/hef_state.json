@@ -1,12 +1,9 @@
 {
- "health": {
-  "consecutive_failures": 0,
-  "last_status": "ok"
- },
  "listings": {
   "albert-camusplaats-159": {
    "address": "Albert Camusplaats 159",
    "first_seen": "2026-10-17T11:26:16+02:00",
+   "p": "hef",
    "published": "2026-10-06T12:58:31.000000Z",
    "rent": 1015,
    "rooms": 4,
@@ -15,9 +12,176 @@
    "status_code": "unavailable",
    "total": 1015
   },
+  "athome:3103": {
+   "address": "Proveniersstraat in Rotterdam",
+   "bedrooms": 1,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "athome",
+   "rent": 1795,
+   "status": "Actief",
+   "status_code": "available"
+  },
+  "athome:3781": {
+   "address": "Houtlaan in Rotterdam",
+   "bedrooms": 3,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "athome",
+   "rent": 2695,
+   "status": "Nieuw",
+   "status_code": "available"
+  },
+  "athome:5217": {
+   "address": "Samuel Mullerplein in Rotterdam",
+   "bedrooms": 5,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "athome",
+   "rent": 2495,
+   "status": "Actief",
+   "status_code": "available"
+  },
+  "athome:5280": {
+   "address": "Bergweg in Rotterdam",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "athome",
+   "rent": 1950,
+   "status": "Nieuw",
+   "status_code": "available"
+  },
+  "athome:5428": {
+   "address": "Kortekade in Rotterdam",
+   "bedrooms": 1,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "athome",
+   "rent": 1257.5,
+   "status": "Actief",
+   "status_code": "available"
+  },
+  "athome:5562": {
+   "address": "Gladiolusstraat in Rotterdam",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "athome",
+   "rent": 1450,
+   "status": "Actief",
+   "status_code": "available"
+  },
+  "athome:5652": {
+   "address": "Adrien Mildersstraat in Rotterdam",
+   "bedrooms": 1,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "athome",
+   "rent": 1495,
+   "status": "Actief",
+   "status_code": "available"
+  },
+  "athome:6090": {
+   "address": "Weena in Rotterdam",
+   "bedrooms": 1,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "athome",
+   "rent": 1795,
+   "status": "Actief",
+   "status_code": "available"
+  },
+  "athome:6381": {
+   "address": "De Savornin Lohmanlaan in Rotterdam",
+   "bedrooms": 4,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "athome",
+   "rent": 1950,
+   "status": "Actief",
+   "status_code": "available"
+  },
+  "athome:6390": {
+   "address": "Beukelsdijk in Rotterdam",
+   "bedrooms": 4,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "athome",
+   "rent": 1950,
+   "status": "Actief",
+   "status_code": "available"
+  },
+  "athome:6403": {
+   "address": "Azaleastraat in Rotterdam",
+   "bedrooms": 3,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "athome",
+   "rent": 2400,
+   "status": "Nieuw",
+   "status_code": "available"
+  },
+  "athome:6421": {
+   "address": "Schiedamseweg in Rotterdam",
+   "bedrooms": 3,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "athome",
+   "rent": 985,
+   "status": "Actief",
+   "status_code": "available"
+  },
+  "athome:6428": {
+   "address": "Zwart Janstraat in Rotterdam",
+   "bedrooms": 4,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "athome",
+   "rent": 2400,
+   "status": "Actief",
+   "status_code": "available"
+  },
+  "athome:6434": {
+   "address": "Honingerdijk in Rotterdam",
+   "bedrooms": 4,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "athome",
+   "rent": 1950,
+   "status": "Actief",
+   "status_code": "available"
+  },
+  "athome:6435": {
+   "address": "Volmarijnstraat in Rotterdam",
+   "bedrooms": 1,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "athome",
+   "rent": 775,
+   "service": 0,
+   "status": "Actief",
+   "status_code": "available",
+   "total": 775
+  },
+  "athome:6437": {
+   "address": "Samuel Mullerplein in Rotterdam",
+   "bedrooms": 4,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "athome",
+   "rent": 2995,
+   "status": "Actief",
+   "status_code": "available"
+  },
+  "athome:6440": {
+   "address": "Bergse Dorpsstraat in Rotterdam",
+   "bedrooms": 1,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "athome",
+   "rent": 1295,
+   "service": 0,
+   "status": "Nieuw",
+   "status_code": "available",
+   "total": 1295
+  },
+  "athome:6443": {
+   "address": "Abraham Kuyperlaan in Rotterdam",
+   "bedrooms": 1,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "athome",
+   "rent": 1112.5,
+   "status": "Nieuw",
+   "status_code": "available"
+  },
   "bierstraat-113": {
    "address": "Bierstraat 113",
    "first_seen": "2026-10-17T11:26:16+02:00",
+   "p": "hef",
    "published": "2026-10-02T06:45:31.000000Z",
    "rent": 1274,
    "rooms": 4,
@@ -28,7 +192,9 @@
   },
   "bornerveld-206": {
    "address": "Bornerveld 206",
+   "bedrooms": 2,
    "first_seen": "2026-10-17T11:26:16+02:00",
+   "p": "hef",
    "published": "2026-09-01T11:42:52.000000Z",
    "rent": 1135,
    "rooms": 3,
@@ -40,6 +206,7 @@
   "briggemandreef-20": {
    "address": "Briggemandreef 20",
    "first_seen": "2026-10-17T11:26:16+02:00",
+   "p": "hef",
    "published": "2026-02-17T17:43:01.000000Z",
    "rent": 460,
    "rooms": null,
@@ -51,6 +218,7 @@
   "briggemandreef-22": {
    "address": "Briggemandreef 22",
    "first_seen": "2026-10-17T11:26:16+02:00",
+   "p": "hef",
    "published": "2026-06-11T10:30:16.000000Z",
    "rent": 1776.37,
    "rooms": null,
@@ -61,7 +229,9 @@
   },
   "burgemeester-brokxlaan-1960": {
    "address": "Burgemeester Brokxlaan 1960",
+   "bedrooms": 2,
    "first_seen": "2026-10-17T11:26:16+02:00",
+   "p": "hef",
    "published": "2026-10-14T08:08:30.000000Z",
    "rent": 1230,
    "rooms": 3,
@@ -72,7 +242,9 @@
   },
   "burgemeester-brokxlaan-2064": {
    "address": "Burgemeester Brokxlaan 2064",
+   "bedrooms": 1,
    "first_seen": "2026-10-17T11:26:16+02:00",
+   "p": "hef",
    "published": "2026-10-14T07:23:09.000000Z",
    "rent": 1134,
    "rooms": 2,
@@ -84,6 +256,7 @@
   "carry-van-bruggensingel-1": {
    "address": "Carry van Bruggensingel 1",
    "first_seen": "2026-10-17T11:26:16+02:00",
+   "p": "hef",
    "published": "2026-10-06T11:29:27.000000Z",
    "rent": 1082,
    "rooms": 4,
@@ -94,7 +267,9 @@
   },
   "dennekruid-31": {
    "address": "Dennekruid 31",
+   "bedrooms": 4,
    "first_seen": "2026-10-17T11:26:16+02:00",
+   "p": "hef",
    "published": "2026-10-16T05:42:17.000000Z",
    "rent": 1250,
    "rooms": 5,
@@ -106,6 +281,7 @@
   "garagebox Boomkor 69": {
    "address": "Garagebox Boomkor 69",
    "first_seen": "2026-10-17T11:26:16+02:00",
+   "p": "hef",
    "published": "2026-10-14T14:15:53.000000Z",
    "rent": 155.1,
    "rooms": null,
@@ -116,7 +292,9 @@
   },
   "heemskerkstraat-5-b": {
    "address": "Heemskerkstraat 5 B",
+   "bedrooms": 2,
    "first_seen": "2026-10-17T11:26:16+02:00",
+   "p": "hef",
    "published": "2026-09-11T18:07:40.000000Z",
    "rent": 1400,
    "rooms": 3,
@@ -128,6 +306,7 @@
   "hongerlandsedijk-638": {
    "address": "Hongerlandsedijk 638",
    "first_seen": "2026-10-17T11:26:16+02:00",
+   "p": "hef",
    "published": "2026-03-19T12:19:23.000000Z",
    "rent": 862.5,
    "rooms": null,
@@ -139,6 +318,7 @@
   "hongerlandsedijk-640": {
    "address": "Hongerlandsedijk 640",
    "first_seen": "2026-10-17T11:26:16+02:00",
+   "p": "hef",
    "published": "2026-07-21T14:47:31.000000Z",
    "rent": 956.25,
    "rooms": null,
@@ -149,7 +329,9 @@
   },
   "huigendijk-3": {
    "address": "Huigendijk 3",
+   "bedrooms": 2,
    "first_seen": "2026-10-17T11:26:16+02:00",
+   "p": "hef",
    "published": "2026-09-30T11:18:57.000000Z",
    "rent": 960,
    "rooms": 3,
@@ -160,7 +342,9 @@
   },
   "laan-op-zuid-663": {
    "address": "Laan op Zuid 663",
+   "bedrooms": 3,
    "first_seen": "2026-10-17T11:26:16+02:00",
+   "p": "hef",
    "published": "2026-10-16T09:27:15.000000Z",
    "rent": 1166,
    "rooms": 4,
@@ -172,6 +356,7 @@
   "laan-op-zuid-905": {
    "address": "Laan op Zuid 905",
    "first_seen": "2026-10-17T11:26:16+02:00",
+   "p": "hef",
    "published": "2026-10-16T06:46:53.000000Z",
    "rent": 1115,
    "rooms": 3,
@@ -183,6 +368,7 @@
   "langenhorst-15": {
    "address": "Garageboxen omgeving Zuidwijk/ Langenhorst",
    "first_seen": "2026-10-17T11:26:16+02:00",
+   "p": "hef",
    "published": "2026-10-02T12:39:12.000000Z",
    "rent": 130,
    "rooms": null,
@@ -194,6 +380,7 @@
   "park-vossendijk-427": {
    "address": "Park Vossendijk 427",
    "first_seen": "2026-10-17T11:26:16+02:00",
+   "p": "hef",
    "published": "2026-09-10T07:12:48.000000Z",
    "rent": 1075,
    "rooms": null,
@@ -204,7 +391,9 @@
   },
   "peur-10": {
    "address": "Peur 10",
+   "bedrooms": 4,
    "first_seen": "2026-10-17T11:26:16+02:00",
+   "p": "hef",
    "published": "2026-10-14T09:12:16.000000Z",
    "rent": 1300,
    "rooms": 5,
@@ -213,9 +402,601 @@
    "status_code": "unavailable",
    "total": 1312
   },
+  "schep:burgemeester-van-walsumweg-burgemeester-van-walsumweg-206": {
+   "address": "Burgemeester van Walsumweg 206",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "schep",
+   "published": "2026-10-13T09:09:21.000000Z",
+   "rent": 959,
+   "rooms": 3,
+   "service": 41,
+   "status": "Onder optie",
+   "status_code": "unavailable",
+   "total": 1000
+  },
+  "schep:burgemeester-van-walsumweg-nieuwehaven-113": {
+   "address": "Nieuwehaven 113",
+   "bedrooms": 3,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "schep",
+   "published": "2026-10-16T09:10:19.000000Z",
+   "rent": 1980,
+   "rooms": 4,
+   "service": 32,
+   "status": "Beschikbaar",
+   "status_code": "available",
+   "total": 2012
+  },
+  "schep:burgemeester-van-walsumweg-nieuwehaven-153": {
+   "address": "Nieuwehaven 153",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "schep",
+   "published": "2026-10-18T12:09:39.000000Z",
+   "rent": 1193.76,
+   "rooms": 3,
+   "service": 31,
+   "status": "Beschikbaar",
+   "status_code": "available",
+   "total": 1224.76
+  },
+  "schep:burgemeester-van-walsumweg-nieuwehaven-175": {
+   "address": "Nieuwehaven 175",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "schep",
+   "published": "2026-10-18T05:09:15.000000Z",
+   "rent": 1186.84,
+   "rooms": 3,
+   "service": 31,
+   "status": "Onder optie",
+   "status_code": "unavailable",
+   "total": 1217.84
+  },
+  "schep:burgemeester-van-walsumweg-nieuwehaven-195": {
+   "address": "Nieuwehaven 195",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "schep",
+   "published": "2026-10-16T09:10:19.000000Z",
+   "rent": 1760,
+   "rooms": 3,
+   "service": 45,
+   "status": "Onder optie",
+   "status_code": "unavailable",
+   "total": 1805
+  },
+  "schep:burgemeester-van-walsumweg-nieuwehaven-27": {
+   "address": "Nieuwehaven 27",
+   "bedrooms": 4,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "schep",
+   "published": "2026-10-15T05:08:03.000000Z",
+   "rent": 2150,
+   "rooms": 5,
+   "service": 50,
+   "status": "Beschikbaar",
+   "status_code": "available",
+   "total": 2200
+  },
+  "schep:burgemeester-van-walsumweg-nieuwehaven-65": {
+   "address": "Nieuwehaven 65",
+   "bedrooms": 3,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "schep",
+   "published": "2026-10-18T13:08:53.000000Z",
+   "rent": 1690,
+   "rooms": 4,
+   "service": 31,
+   "status": "Beschikbaar",
+   "status_code": "available",
+   "total": 1721
+  },
+  "schep:burgemeester-van-walsumweg-nieuwehaven-75": {
+   "address": "Nieuwehaven 75",
+   "bedrooms": 3,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "schep",
+   "published": "2026-10-15T12:10:52.000000Z",
+   "rent": 1995,
+   "rooms": 4,
+   "service": 32,
+   "status": "Beschikbaar",
+   "status_code": "available",
+   "total": 2027
+  },
+  "schep:de-zalmhaven-gedempte-zalmhaven-110": {
+   "address": "Gedempte Zalmhaven 110",
+   "bedrooms": 3,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "schep",
+   "published": "2026-10-16T12:11:39.000000Z",
+   "rent": 1945,
+   "rooms": 4,
+   "service": 100,
+   "status": "Beschikbaar",
+   "status_code": "available",
+   "total": 2045
+  },
+  "schep:de-zalmhaven-gedempte-zalmhaven-302": {
+   "address": "Gedempte Zalmhaven 302",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "schep",
+   "published": "2026-09-29T10:11:29.000000Z",
+   "rent": 1740,
+   "rooms": 3,
+   "service": 100,
+   "status": "Verkocht/Verhuurd",
+   "status_code": "occupied",
+   "total": 1840
+  },
+  "schep:de-zalmhaven-gedempte-zalmhaven-96": {
+   "address": "Gedempte Zalmhaven 96",
+   "bedrooms": 1,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "schep",
+   "published": "2026-10-18T11:08:31.000000Z",
+   "rent": 1545,
+   "rooms": 2,
+   "service": 100,
+   "status": "Beschikbaar",
+   "status_code": "available",
+   "total": 1645
+  },
+  "schep:de-zalmhaven-houtlaan-11": {
+   "address": "Houtlaan 11",
+   "bedrooms": 3,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "schep",
+   "published": "2026-10-16T05:08:55.000000Z",
+   "rent": 2125,
+   "rooms": 4,
+   "service": 125,
+   "status": "Beschikbaar",
+   "status_code": "available",
+   "total": 2250
+  },
+  "schep:de-zalmhaven-houtlaan-137": {
+   "address": "Houtlaan 137",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "schep",
+   "published": "2026-10-16T14:11:00.000000Z",
+   "rent": 1920,
+   "rooms": 3,
+   "service": 125,
+   "status": "Beschikbaar",
+   "status_code": "available",
+   "total": 2045
+  },
+  "schep:de-zalmhaven-houtlaan-211": {
+   "address": "Houtlaan 211",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "schep",
+   "published": "2026-09-07T19:07:20.000000Z",
+   "rent": 1795,
+   "rooms": 3,
+   "service": 125,
+   "status": "Verkocht/Verhuurd",
+   "status_code": "occupied",
+   "total": 1920
+  },
+  "schep:de-zalmhaven-houtlaan-25": {
+   "address": "Houtlaan 25",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "schep",
+   "published": "2026-10-14T14:10:21.000000Z",
+   "rent": 1665,
+   "rooms": 3,
+   "service": 125,
+   "status": "Onder optie",
+   "status_code": "unavailable",
+   "total": 1790
+  },
+  "schep:de-zalmhaven-houtlaan-279": {
+   "address": "Houtlaan 279",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "schep",
+   "published": "2026-10-18T08:08:39.000000Z",
+   "rent": 1865,
+   "rooms": 3,
+   "service": 125,
+   "status": "Beschikbaar",
+   "status_code": "available",
+   "total": 1990
+  },
+  "schep:de-zalmhaven-houtlaan-31": {
+   "address": "Houtlaan 31",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "schep",
+   "published": "2026-09-11T08:08:15.000000Z",
+   "rent": 1665,
+   "rooms": 3,
+   "service": 125,
+   "status": "Verkocht/Verhuurd",
+   "status_code": "occupied",
+   "total": 1790
+  },
+  "schep:huis-op-zuid-laan-op-zuid-1067-c": {
+   "address": "Laan op Zuid 1067 C",
+   "bedrooms": 1,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "schep",
+   "published": "2026-09-14T09:06:43.000000Z",
+   "rent": 1193.76,
+   "rooms": 2,
+   "service": 75,
+   "status": "Onder optie",
+   "status_code": "unavailable",
+   "total": 1268.76
+  },
+  "schep:huis-op-zuid-laan-op-zuid-1075-b": {
+   "address": "Laan op Zuid 1075 B",
+   "bedrooms": 1,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "schep",
+   "published": "2026-10-17T13:08:36.000000Z",
+   "rent": 1070.14,
+   "rooms": 2,
+   "service": 75,
+   "status": "Onder optie",
+   "status_code": "unavailable",
+   "total": 1145.14
+  },
+  "schep:huis-op-zuid-laan-op-zuid-1107-a": {
+   "address": "Laan op Zuid 1107 A",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "schep",
+   "published": "2026-09-30T10:08:04.000000Z",
+   "rent": 1341.84,
+   "rooms": 3,
+   "service": 75,
+   "status": "Verkocht/Verhuurd",
+   "status_code": "occupied",
+   "total": 1416.84
+  },
+  "schep:lloyd-yard-loods-bali-32": {
+   "address": "Loods Bali 32",
+   "bedrooms": 1,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "schep",
+   "published": "2026-10-13T08:09:54.000000Z",
+   "rent": 1318,
+   "rooms": 2,
+   "service": 50,
+   "status": "Onder optie",
+   "status_code": "unavailable",
+   "total": 1368
+  },
+  "schep:lloyd-yard-loods-bali-50": {
+   "address": "Loods Bali 50",
+   "bedrooms": 1,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "schep",
+   "published": "2026-10-14T11:08:41.000000Z",
+   "rent": 1318,
+   "rooms": 2,
+   "service": 50,
+   "status": "Onder optie",
+   "status_code": "unavailable",
+   "total": 1368
+  },
+  "schep:lloyd-yard-loods-bali-66": {
+   "address": "Loods Bali 66",
+   "bedrooms": 1,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "schep",
+   "published": "2026-10-08T16:08:43.000000Z",
+   "rent": 1318,
+   "rooms": 2,
+   "service": 50,
+   "status": "Verkocht/Verhuurd",
+   "status_code": "occupied",
+   "total": 1368
+  },
+  "schep:lloyd-yard-loods-bali-8": {
+   "address": "Loods Bali 8",
+   "bedrooms": 1,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "schep",
+   "published": "2026-10-08T12:09:33.000000Z",
+   "rent": 1318,
+   "rooms": 2,
+   "service": 50,
+   "status": "Onder optie",
+   "status_code": "unavailable",
+   "total": 1368
+  },
+  "schep:lloyd-yard-loods-bali-94": {
+   "address": "Loods Bali 94",
+   "bedrooms": 1,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "schep",
+   "published": "2026-10-08T17:09:20.000000Z",
+   "rent": 1490,
+   "rooms": 2,
+   "service": 50,
+   "status": "Verkocht/Verhuurd",
+   "status_code": "occupied",
+   "total": 1540
+  },
+  "schep:lloyd-yard-loods-bali-96": {
+   "address": "Loods Bali 96",
+   "bedrooms": 1,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "schep",
+   "published": "2026-10-08T12:09:33.000000Z",
+   "rent": 1318,
+   "rooms": 1,
+   "service": 50,
+   "status": "Onder optie",
+   "status_code": "unavailable",
+   "total": 1368
+  },
+  "schep:other-properties-ptm-schep-prod-weena-397-a": {
+   "address": "Weena 397 A",
+   "bedrooms": 1,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "schep",
+   "published": "2026-10-16T12:09:42.000000Z",
+   "rent": 1605,
+   "rooms": 3,
+   "service": 70,
+   "status": "Beschikbaar",
+   "status_code": "available",
+   "total": 1675
+  },
+  "schep:other-properties-ptm-schep-prod-weena-403-a": {
+   "address": "Weena 403 A",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "schep",
+   "published": "2026-10-18T13:07:22.000000Z",
+   "rent": 1670,
+   "rooms": 3,
+   "service": 70,
+   "status": "Beschikbaar",
+   "status_code": "available",
+   "total": 1740
+  },
+  "schep:other-properties-ptm-schep-prod-weena-437-d": {
+   "address": "Weena 437 D",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "schep",
+   "published": "2026-10-16T10:08:37.000000Z",
+   "rent": 1710,
+   "rooms": 4,
+   "service": 70,
+   "status": "Onder optie",
+   "status_code": "unavailable",
+   "total": 1780
+  },
+  "schep:sawa-kratonkade-92": {
+   "address": "Kratonkade 92",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "schep",
+   "published": "2026-10-15T12:10:11.000000Z",
+   "rent": 1896.18,
+   "rooms": 3,
+   "service": 70,
+   "status": "Onder optie",
+   "status_code": "unavailable",
+   "total": 1966.18
+  },
+  "schep:sawa-kratonkade-94": {
+   "address": "Kratonkade 94",
+   "bedrooms": 2,
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "schep",
+   "published": "2026-10-13T05:07:56.000000Z",
+   "rent": 1859.81,
+   "rooms": 3,
+   "service": 70,
+   "status": "Beschikbaar",
+   "status_code": "available",
+   "total": 1929.81
+  },
+  "vbt:rotterdam-brede-hilledijk-184": {
+   "address": "Brede Hilledijk 184",
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "vbt",
+   "rent": 2376,
+   "rooms": 4,
+   "service": 90,
+   "status": "Verhuurd",
+   "status_code": "rentinuse",
+   "total": 2466
+  },
+  "vbt:rotterdam-brede-hilledijk-196": {
+   "address": "Brede Hilledijk 196",
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "vbt",
+   "rent": 2410,
+   "rooms": 6,
+   "service": 90,
+   "status": "Beschikbaar",
+   "status_code": "available",
+   "total": 2500
+  },
+  "vbt:rotterdam-brede-hilledijk-202": {
+   "address": "Brede Hilledijk 202",
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "vbt",
+   "rent": 2106,
+   "rooms": 6,
+   "service": 110,
+   "status": "Beschikbaar",
+   "status_code": "available",
+   "total": 2216
+  },
+  "vbt:rotterdam-brede-hilledijk-226": {
+   "address": "Brede Hilledijk 226",
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "vbt",
+   "rent": 1808,
+   "rooms": 3,
+   "service": 110,
+   "status": "Beschikbaar",
+   "status_code": "available",
+   "total": 1918
+  },
+  "vbt:rotterdam-brede-hilledijk-278": {
+   "address": "Brede Hilledijk 278",
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "vbt",
+   "rent": 1844,
+   "rooms": 3,
+   "service": 90,
+   "status": "Onder optie",
+   "status_code": "option",
+   "total": 1934
+  },
+  "vbt:rotterdam-brede-hilledijk-288": {
+   "address": "Brede Hilledijk 288",
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "vbt",
+   "rent": 1816,
+   "rooms": 3,
+   "service": 90,
+   "status": "Verhuurd",
+   "status_code": "rentinuse",
+   "total": 1906
+  },
+  "vbt:rotterdam-brede-hilledijk-290": {
+   "address": "Brede Hilledijk 290",
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "vbt",
+   "rent": 1938,
+   "rooms": 3,
+   "service": 110,
+   "status": "Beschikbaar",
+   "status_code": "available",
+   "total": 2048
+  },
+  "vbt:rotterdam-brede-hilledijk-330": {
+   "address": "Brede Hilledijk 330",
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "vbt",
+   "rent": 1987,
+   "rooms": 3,
+   "service": 90,
+   "status": "Onder optie",
+   "status_code": "option",
+   "total": 2077
+  },
+  "vbt:rotterdam-brede-hilledijk-428b": {
+   "address": "Brede Hilledijk 428 B",
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "vbt",
+   "rent": 1791,
+   "rooms": 3,
+   "service": 90,
+   "status": "Beschikbaar",
+   "status_code": "available",
+   "total": 1881
+  },
+  "vbt:rotterdam-brede-hilledijk-436d": {
+   "address": "Brede Hilledijk 436 D",
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "vbt",
+   "rent": 1749,
+   "rooms": 3,
+   "service": 90,
+   "status": "Beschikbaar",
+   "status_code": "available",
+   "total": 1839
+  },
+  "vbt:rotterdam-hanoistraat-79": {
+   "address": "Hanoistraat 79",
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "vbt",
+   "rent": 1716,
+   "rooms": 3,
+   "service": 90,
+   "status": "Onder optie",
+   "status_code": "option",
+   "total": 1806
+  },
+  "vbt:rotterdam-kruisplein-216": {
+   "address": "Kruisplein 216",
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "vbt",
+   "rent": 2149,
+   "rooms": 3,
+   "service": 109,
+   "status": "Onder optie",
+   "status_code": "option",
+   "total": 2258
+  },
+  "vbt:rotterdam-kruisplein-376": {
+   "address": "Kruisplein 376",
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "vbt",
+   "rent": 1986,
+   "rooms": 3,
+   "service": 115,
+   "status": "Beschikbaar",
+   "status_code": "available",
+   "total": 2101
+  },
+  "vbt:rotterdam-maashavenweg-110": {
+   "address": "Maashavenweg 110",
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "vbt",
+   "rent": 1897,
+   "rooms": 3,
+   "service": 82,
+   "status": "Verhuurd",
+   "status_code": "rentinuse",
+   "total": 1979
+  },
+  "vbt:rotterdam-maashavenweg-128": {
+   "address": "Maashavenweg 128",
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "vbt",
+   "rent": 1683,
+   "rooms": 3,
+   "service": 90,
+   "status": "Onder optie",
+   "status_code": "option",
+   "total": 1773
+  },
+  "vbt:rotterdam-maashavenweg-58": {
+   "address": "Maashavenweg 58",
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "vbt",
+   "rent": 1910,
+   "rooms": 3,
+   "service": 82,
+   "status": "Verhuurd",
+   "status_code": "rentinuse",
+   "total": 1992
+  },
+  "vbt:rotterdam-sicilieboulevard-324": {
+   "address": "Sicilieboulevard 324",
+   "first_seen": "2026-10-18T15:43:36+02:00",
+   "p": "vbt",
+   "rent": 1777,
+   "rooms": 4,
+   "service": 90,
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "rentreserved",
+   "total": 1867
+  },
   "vuurplaat-274": {
    "address": "Vuurplaat 274",
+   "bedrooms": 3,
    "first_seen": "2026-10-17T11:26:16+02:00",
+   "p": "hef",
    "published": "2026-10-16T09:45:28.000000Z",
    "rent": 1353,
    "rooms": 4,
@@ -226,7 +1007,9 @@
   },
   "zwaardvisstraat-22": {
    "address": "Zwaardvisstraat 22",
+   "bedrooms": 2,
    "first_seen": "2026-10-17T11:26:16+02:00",
+   "p": "hef",
    "published": "2026-09-04T13:06:15.000000Z",
    "rent": 1275,
    "rooms": 3,
@@ -235,5 +1018,29 @@
    "status_code": "unavailable",
    "total": 1332
   }
- }
+ },
+ "platform_health": {
+  "athome": {
+   "consecutive_failures": 0,
+   "last_status": "ok"
+  },
+  "hef": {
+   "consecutive_failures": 0,
+   "last_status": "ok"
+  },
+  "schep": {
+   "consecutive_failures": 0,
+   "last_status": "ok"
+  },
+  "vbt": {
+   "consecutive_failures": 0,
+   "last_status": "ok"
+  }
+ },
+ "seeded": [
+  "athome",
+  "hef",
+  "schep",
+  "vbt"
+ ]
 }
