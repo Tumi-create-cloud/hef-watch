@@ -1151,7 +1151,7 @@
    "bedrooms": 3,
    "first_seen": "2026-10-18T15:43:36+02:00",
    "p": "schep",
-   "published": "2026-10-18T18:09:50.000000Z",
+   "published": "2026-10-19T07:08:22.000000Z",
    "rent": 1690,
    "rooms": 4,
    "service": 31,
@@ -1203,7 +1203,7 @@
    "bedrooms": 1,
    "first_seen": "2026-10-18T15:43:36+02:00",
    "p": "schep",
-   "published": "2026-10-19T05:07:52.000000Z",
+   "published": "2026-10-19T07:08:17.000000Z",
    "rent": 1545,
    "rooms": 2,
    "service": 100,
@@ -1255,7 +1255,7 @@
    "bedrooms": 2,
    "first_seen": "2026-10-18T15:43:36+02:00",
    "p": "schep",
-   "published": "2026-10-14T14:10:21.000000Z",
+   "published": "2026-10-19T07:08:17.000000Z",
    "rent": 1665,
    "rooms": 3,
    "service": 125,
@@ -1424,7 +1424,7 @@
    "bedrooms": 2,
    "first_seen": "2026-10-18T15:43:36+02:00",
    "p": "schep",
-   "published": "2026-10-18T13:07:22.000000Z",
+   "published": "2026-10-19T07:06:39.000000Z",
    "rent": 1670,
    "rooms": 3,
    "service": 70,
@@ -2299,9 +2299,9 @@
    "last_status": "ok"
   },
   "vbt": {
-   "consecutive_failures": 4,
+   "consecutive_failures": 0,
    "last_error": "fetch failed after 2 attempts: TimeoutError: The read operation timed out",
-   "last_status": "error"
+   "last_status": "ok"
   },
   "vesteda": {
    "consecutive_failures": 0,
