@@ -2140,8 +2140,8 @@
    "first_seen": "2026-10-18T17:15:35+02:00",
    "p": "vesteda",
    "rent": 946.61,
-   "status": "Verhuurd onder voorbehoud",
-   "status_code": "rented_reserved"
+   "status": "Verhuurd",
+   "status_code": "rented"
   },
   "vesteda:5777": {
    "address": "Grotemarkt 196",
@@ -2296,9 +2296,11 @@
    "last_status": "ok"
   },
   "vbt": {
-   "consecutive_failures": 0,
+   "alerted": false,
+   "consecutive_failures": 1,
+   "failing_since": "2026-10-19T11:04:11+02:00",
    "last_error": "fetch failed after 2 attempts: TimeoutError: The read operation timed out",
-   "last_status": "ok"
+   "last_status": "error"
   },
   "vesteda": {
    "consecutive_failures": 0,
