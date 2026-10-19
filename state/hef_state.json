@@ -2297,7 +2297,7 @@
   },
   "vbt": {
    "alerted": false,
-   "consecutive_failures": 3,
+   "consecutive_failures": 4,
    "failing_since": "2026-10-19T11:04:11+02:00",
    "last_error": "fetch failed after 2 attempts: TimeoutError: The read operation timed out",
    "last_status": "error"
