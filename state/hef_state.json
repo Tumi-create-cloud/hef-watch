@@ -2294,11 +2294,9 @@
    "last_status": "ok"
   },
   "schep": {
-   "alerted": false,
-   "consecutive_failures": 3,
-   "failing_since": "2026-10-19T22:20:33+02:00",
+   "consecutive_failures": 0,
    "last_error": "fetch failed after 2 attempts: HTTPError: HTTP Error 503: Service Unavailable",
-   "last_status": "error"
+   "last_status": "ok"
   },
   "vbt": {
    "consecutive_failures": 0,
