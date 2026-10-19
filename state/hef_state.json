@@ -2299,8 +2299,9 @@
    "last_status": "ok"
   },
   "vbt": {
-   "consecutive_failures": 0,
-   "last_status": "ok"
+   "consecutive_failures": 1,
+   "last_error": "fetch failed after 2 attempts: TimeoutError: The read operation timed out",
+   "last_status": "error"
   },
   "vesteda": {
    "consecutive_failures": 0,
