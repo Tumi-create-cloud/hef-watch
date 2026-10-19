@@ -12,7 +12,7 @@ STATUS = {"available": "Beschikbaar", "option": "Onder optie", "rentreserved": "
 def fetch():
     out, page, pages = [], 1, 1
     while page <= pages and page <= 5:
-        d = post_json(f"{BASE}/api/properties/search", {"limit": 200, "page": page, "filter": {"city": CITY}})
+        d = post_json(f"{BASE}/api/properties/search", {"limit": 200, "page": page, "filter": {"city": CITY}}, timeout=30)
         if "houses" not in d: raise ValueError("response without 'houses'")
         pages = d.get("pageCount") or 1
         for x in d["houses"]:

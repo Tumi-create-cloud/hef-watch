@@ -12,6 +12,7 @@ from zoneinfo import ZoneInfo
 from adapters import ADAPTERS
 
 TZ = ZoneInfo("Europe/Amsterdam")
+HEALTH_ALERT_AFTER_S = 15 * 60   # only alert when a platform has been failing continuously this long
 RELEVANT = {"NEW", "STATUS_CHANGE", "PRICE_CHANGE", "REAPPEARED"}
 REMIND_EVERY = dt.timedelta(minutes=30)
 REMIND_WINDOW = (dt.time(7, 0), dt.time(23, 30))
@@ -122,14 +123,27 @@ def watch(state_path, runtime_path, cfg, only=None, force=False):
         rt[ad.KEY] = t
         h = st["platform_health"].setdefault(ad.KEY, {"consecutive_failures": 0})
         prev = h.get("consecutive_failures", 0)
+        if prev and not h.get("failing_since"):   # outage from before time-based alerting: HEALTH was already sent
+            h["failing_since"] = ts; h["alerted"] = True
         if err:
+            if not prev: h["failing_since"] = ts; h["alerted"] = False
             h["consecutive_failures"] = prev + 1; h["last_status"] = "error"; h["last_error"] = err
-            events.append({"type": "HEALTH", "platform": ad.NAME, "match": None, "first_failure": prev == 0,
-                           "note": f"{ad.NAME}: {err}", "fatal": not listings})
+            down_s = (dt.datetime.fromisoformat(ts) - dt.datetime.fromisoformat(h["failing_since"])).total_seconds()
+            alert = not h.get("alerted") and down_s >= HEALTH_ALERT_AFTER_S
+            if alert: h["alerted"] = True
+            events.append({"type": "HEALTH", "platform": ad.NAME, "match": None, "first_failure": alert,
+                           "down_min": round(down_s / 60), "since": h["failing_since"],
+                           "note": f"{ad.NAME}: {err} (al {round(down_s / 60)} min onbereikbaar)", "fatal": not listings})
         else:
+            alerted = h.get("alerted"); since = h.get("failing_since")
             h["consecutive_failures"] = 0; h["last_status"] = "ok"
-            if prev: events.append({"type": "HEALTH_RECOVERED", "platform": ad.NAME, "match": None,
-                                    "note": f"{ad.NAME}: hersteld na {prev} fouten"})
+            for k in ("failing_since", "alerted"): h.pop(k, None)
+            if prev and alerted:
+                events.append({"type": "HEALTH_RECOVERED", "platform": ad.NAME, "match": None,
+                               "note": f"{ad.NAME}: hersteld na {prev} fouten" + (f" (storing sinds {since[11:16]})" if since else "")})
+            elif prev:
+                events.append({"type": "HEALTH_BLIP", "platform": ad.NAME, "match": None,
+                               "note": f"{ad.NAME}: korte storing ({prev} fouten), stil hersteld"})
         summary[ad.KEY] = {"n": len(listings), "src": source, "ok": not err, "s": secs}
         if not listings: continue
         first = ad.KEY not in st["seeded"]
