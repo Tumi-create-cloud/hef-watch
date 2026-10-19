@@ -355,8 +355,8 @@
    "first_seen": "2026-10-18T15:53:36+02:00",
    "p": "ikwilhuren",
    "rent": 1990,
-   "status": "Verhuurd onder voorbehoud",
-   "status_code": "verhuurd onder voorbehoud"
+   "status": "Verhuurd",
+   "status_code": "verhuurd"
   },
   "ikwilhuren:04a826b79b8baffe00c234fbe7bf53b9": {
    "address": "Jufferhof 50K",
