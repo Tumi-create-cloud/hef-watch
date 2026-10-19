@@ -1837,8 +1837,8 @@
    "first_seen": "2026-10-18T17:15:35+02:00",
    "p": "vesteda",
    "rent": 1985.0,
-   "status": "Te huur",
-   "status_code": "available"
+   "status": "Gereserveerd",
+   "status_code": "reserved"
   },
   "vesteda:180702": {
    "address": "Laan Op Zuid 1840",
