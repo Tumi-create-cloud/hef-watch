@@ -1322,6 +1322,7 @@
    "first_seen": "2026-10-18T15:43:36+02:00",
    "p": "schep",
    "published": "2026-09-30T10:08:04.000000Z",
+   "removed": "2026-10-19T11:12:11+02:00",
    "rent": 1341.84,
    "rooms": 3,
    "service": 75,
@@ -2296,11 +2297,9 @@
    "last_status": "ok"
   },
   "vbt": {
-   "alerted": false,
-   "consecutive_failures": 4,
-   "failing_since": "2026-10-19T11:04:11+02:00",
+   "consecutive_failures": 0,
    "last_error": "fetch failed after 2 attempts: TimeoutError: The read operation timed out",
-   "last_status": "error"
+   "last_status": "ok"
   },
   "vesteda": {
    "consecutive_failures": 0,
