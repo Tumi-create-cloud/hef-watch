@@ -2285,8 +2285,11 @@
    "last_status": "ok"
   },
   "hef": {
-   "consecutive_failures": 0,
-   "last_status": "ok"
+   "alerted": false,
+   "consecutive_failures": 1,
+   "failing_since": "2026-10-19T22:16:33+02:00",
+   "last_error": "0 listings parsed",
+   "last_status": "error"
   },
   "ikwilhuren": {
    "consecutive_failures": 0,
