@@ -2016,8 +2016,8 @@
    "first_seen": "2026-10-18T17:15:35+02:00",
    "p": "vesteda",
    "rent": 1505.0,
-   "status": "Verhuurd onder voorbehoud",
-   "status_code": "rented_reserved"
+   "status": "Verhuurd",
+   "status_code": "rented"
   },
   "vesteda:33241": {
    "address": "Zalmstraat 113",
