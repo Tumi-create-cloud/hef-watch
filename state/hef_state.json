@@ -1533,6 +1533,7 @@
    "address": "Brede Hilledijk 288",
    "first_seen": "2026-10-18T15:43:36+02:00",
    "p": "vbt",
+   "removed": "2026-10-20T04:08:44+02:00",
    "rent": 1816,
    "rooms": 3,
    "service": 90,
