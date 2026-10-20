@@ -1756,6 +1756,15 @@
    "status": "Te huur",
    "status_code": "available"
   },
+  "vesteda:125914": {
+   "address": "Albertina Sisulupad 248",
+   "bedrooms": 3,
+   "first_seen": "2026-10-20T19:01:20+02:00",
+   "p": "vesteda",
+   "rent": 1950.0,
+   "status": "Te huur",
+   "status_code": "available"
+  },
   "vesteda:148304": {
    "address": "Albertina Sisulupad 172",
    "bedrooms": 1,
@@ -1973,6 +1982,15 @@
    "status": "Verhuurd onder voorbehoud",
    "status_code": "rented_reserved"
   },
+  "vesteda:186146": {
+   "address": "Laan Op Zuid 1766",
+   "bedrooms": 1,
+   "first_seen": "2026-10-20T19:01:20+02:00",
+   "p": "vesteda",
+   "rent": 1248.0,
+   "status": "Te huur",
+   "status_code": "available"
+  },
   "vesteda:19781": {
    "address": "Maashavenkade 3",
    "bedrooms": 2,
@@ -2025,6 +2043,15 @@
    "rent": 1505.0,
    "status": "Verhuurd",
    "status_code": "rented"
+  },
+  "vesteda:33231": {
+   "address": "Zalmstraat 93",
+   "bedrooms": 1,
+   "first_seen": "2026-10-20T19:01:20+02:00",
+   "p": "vesteda",
+   "rent": 2185.0,
+   "status": "Te huur",
+   "status_code": "available"
   },
   "vesteda:33241": {
    "address": "Zalmstraat 113",
