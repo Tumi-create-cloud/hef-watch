@@ -949,8 +949,8 @@
    "first_seen": "2026-10-18T15:53:36+02:00",
    "p": "ikwilhuren",
    "rent": 1670,
-   "status": "Verhuurd onder voorbehoud",
-   "status_code": "verhuurd onder voorbehoud"
+   "status": "Gereserveerd",
+   "status_code": "gereserveerd"
   },
   "ikwilhuren:e77acf671b29fef8ba0140e6f3a274ee": {
    "address": "Louis Pregerkade 162",
