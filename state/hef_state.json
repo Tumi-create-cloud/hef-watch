@@ -1676,8 +1676,8 @@
    "first_seen": "2026-10-18T17:15:35+02:00",
    "p": "vesteda",
    "rent": 1605.0,
-   "status": "Te huur",
-   "status_code": "available"
+   "status": "Gereserveerd",
+   "status_code": "reserved"
   },
   "vesteda:10885": {
    "address": "Damastroos 27",
