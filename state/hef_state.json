@@ -2190,8 +2190,8 @@
    "first_seen": "2026-10-18T17:15:35+02:00",
    "p": "vesteda",
    "rent": 1860.0,
-   "status": "Gereserveerd",
-   "status_code": "reserved"
+   "status": "Te huur",
+   "status_code": "available"
   },
   "vesteda:7365": {
    "address": "De Monchyplein 32",
