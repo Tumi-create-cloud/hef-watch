@@ -435,8 +435,8 @@
    "first_seen": "2026-10-18T15:53:36+02:00",
    "p": "ikwilhuren",
    "rent": 1750,
-   "status": "Te huur",
-   "status_code": "available"
+   "status": "Gereserveerd",
+   "status_code": "gereserveerd"
   },
   "ikwilhuren:29d6b38133f8e88a9d8aa2c1060cdc68": {
    "address": "Samuel Soesmanstraat 102",
@@ -1848,8 +1848,8 @@
    "first_seen": "2026-10-18T17:15:35+02:00",
    "p": "vesteda",
    "rent": 1885.0,
-   "status": "Te huur",
-   "status_code": "available"
+   "status": "Gereserveerd",
+   "status_code": "reserved"
   },
   "vesteda:180851": {
    "address": "Laan Op Zuid 1894",
