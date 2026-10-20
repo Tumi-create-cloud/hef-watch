@@ -726,8 +726,8 @@
    "first_seen": "2026-10-18T15:53:36+02:00",
    "p": "ikwilhuren",
    "rent": 1200,
-   "status": "Te huur",
-   "status_code": "available"
+   "status": "Gereserveerd",
+   "status_code": "gereserveerd"
   },
   "ikwilhuren:90d41b17c9883ddca84cf37a62e2df12": {
    "address": "Van Oldenbarneveltplaats 24A",
