@@ -949,8 +949,8 @@
    "first_seen": "2026-10-18T15:53:36+02:00",
    "p": "ikwilhuren",
    "rent": 1670,
-   "status": "Te huur",
-   "status_code": "available"
+   "status": "Gereserveerd",
+   "status_code": "gereserveerd"
   },
   "ikwilhuren:e77acf671b29fef8ba0140e6f3a274ee": {
    "address": "Louis Pregerkade 162",
@@ -2172,8 +2172,8 @@
    "first_seen": "2026-10-18T17:15:35+02:00",
    "p": "vesteda",
    "rent": 1560.0,
-   "status": "Te huur",
-   "status_code": "available"
+   "status": "Gereserveerd",
+   "status_code": "reserved"
   },
   "vesteda:7030": {
    "address": "Gedempte Zalmhaven 311",
@@ -2305,7 +2305,7 @@
   },
   "vbt": {
    "alerted": false,
-   "consecutive_failures": 3,
+   "consecutive_failures": 4,
    "failing_since": "2026-10-20T12:03:08+02:00",
    "last_error": "fetch failed after 2 attempts: TimeoutError: The read operation timed out",
    "last_status": "error"
