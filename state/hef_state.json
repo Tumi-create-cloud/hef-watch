@@ -1694,8 +1694,8 @@
    "first_seen": "2026-10-18T17:15:35+02:00",
    "p": "vesteda",
    "rent": 1975.0,
-   "status": "Gereserveerd",
-   "status_code": "reserved"
+   "status": "Te huur",
+   "status_code": "available"
   },
   "vesteda:11567": {
    "address": "Van Der Hoevenplein 96",
@@ -2226,8 +2226,8 @@
    "first_seen": "2026-10-18T17:15:35+02:00",
    "p": "vesteda",
    "rent": 1910.0,
-   "status": "Verhuurd onder voorbehoud",
-   "status_code": "rented_reserved"
+   "status": "Te huur",
+   "status_code": "available"
   },
   "vesteda:9511": {
    "address": "De Monchyplein 40",
