@@ -2265,8 +2265,8 @@
    "first_seen": "2026-10-18T17:15:35+02:00",
    "p": "vesteda",
    "rent": 1860.0,
-   "status": "Gereserveerd",
-   "status_code": "reserved"
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "rented_reserved"
   },
   "vesteda:9500": {
    "address": "Van Der Hoevenplein 70",
