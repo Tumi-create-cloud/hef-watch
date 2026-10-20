@@ -1478,6 +1478,7 @@
    "address": "Brede Hilledijk 184",
    "first_seen": "2026-10-18T15:43:36+02:00",
    "p": "vbt",
+   "removed": "2026-10-20T16:09:21+02:00",
    "rent": 2376,
    "rooms": 4,
    "service": 90,
@@ -1533,6 +1534,7 @@
    "address": "Brede Hilledijk 288",
    "first_seen": "2026-10-18T15:43:36+02:00",
    "p": "vbt",
+   "removed": "2026-10-20T16:09:21+02:00",
    "rent": 1816,
    "rooms": 3,
    "service": 90,
@@ -1621,6 +1623,7 @@
    "address": "Maashavenweg 110",
    "first_seen": "2026-10-18T15:43:36+02:00",
    "p": "vbt",
+   "removed": "2026-10-20T16:09:21+02:00",
    "rent": 1897,
    "rooms": 3,
    "service": 82,
@@ -1643,6 +1646,7 @@
    "address": "Maashavenweg 58",
    "first_seen": "2026-10-18T15:43:36+02:00",
    "p": "vbt",
+   "removed": "2026-10-20T16:09:21+02:00",
    "rent": 1910,
    "rooms": 3,
    "service": 82,
@@ -1821,8 +1825,8 @@
    "first_seen": "2026-10-18T17:15:35+02:00",
    "p": "vesteda",
    "rent": 1001.5,
-   "status": "Verhuurd onder voorbehoud",
-   "status_code": "rented_reserved"
+   "status": "Te huur",
+   "status_code": "available"
   },
   "vesteda:180632": {
    "address": "Grote Beer 3 J-01",
@@ -2304,11 +2308,9 @@
    "last_status": "ok"
   },
   "vbt": {
-   "alerted": false,
-   "consecutive_failures": 3,
-   "failing_since": "2026-10-20T16:03:21+02:00",
+   "consecutive_failures": 0,
    "last_error": "fetch failed after 2 attempts: TimeoutError: The read operation timed out",
-   "last_status": "error"
+   "last_status": "ok"
   },
   "vesteda": {
    "consecutive_failures": 0,
