@@ -1,1 +1,13 @@
-[]
+[
+ {
+  "address": "Louis Pregerkade 162",
+  "bedrooms": 3,
+  "m2": 95,
+  "match": "twijfel",
+  "platform": "Ik wil huren (MVGM)",
+  "rent": 1492,
+  "slug": "ikwilhuren:e77acf671b29fef8ba0140e6f3a274ee",
+  "status": "Te huur",
+  "url": "https://ikwilhuren.nu/object/rotterdam-3071az-162-louis-pregerkade-e77acf671b29fef8ba0140e6f3a274ee/"
+ }
+]
