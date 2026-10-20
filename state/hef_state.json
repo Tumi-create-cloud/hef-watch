@@ -1722,8 +1722,8 @@
    "first_seen": "2026-10-18T17:15:35+02:00",
    "p": "vesteda",
    "rent": 2170.0,
-   "status": "Gereserveerd",
-   "status_code": "reserved"
+   "status": "Te huur",
+   "status_code": "available"
   },
   "vesteda:12090": {
    "address": "Clazina Kouwenbergzoom 232",
