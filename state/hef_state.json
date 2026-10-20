@@ -958,8 +958,8 @@
    "first_seen": "2026-10-18T15:53:36+02:00",
    "p": "ikwilhuren",
    "rent": 1492,
-   "status": "Verhuurd onder voorbehoud",
-   "status_code": "verhuurd onder voorbehoud"
+   "status": "Te huur",
+   "status_code": "available"
   },
   "ikwilhuren:e84c5af805e32d7771399fad0e136b22": {
    "address": "Van Oldenbarneveltplaats 14K",
