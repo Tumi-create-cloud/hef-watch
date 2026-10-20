@@ -250,10 +250,12 @@ def main():
     if any(e["type"] == "HEALTH" for e in events): reasons.append("HEALTH")
     if any(e["type"] == "HEALTH_RECOVERED" for e in events): reasons.append("RECOVERED")
     pend = pending_items(sp("hef_pending.json"))
+    if "ALERT" in reasons:  # verse melding: herinneringsklok start nu, eerste reminder pas na 30 min
+        ds["last_reminder"] = t.isoformat()
     in_window = REMIND_WINDOW[0] <= t.time() < REMIND_WINDOW[1]
     last = ds.get("last_reminder")
     due = not last or t - dt.datetime.fromisoformat(last) >= REMIND_EVERY
-    if pend and in_window and (due or reasons):
+    if pend and in_window and (due or (reasons and "ALERT" not in reasons)):
         events.append({"type": "REMINDER", "match": "match", "items": pend,
                        "note": f"{len(pend)} passende woning(en) wachten nog op reactie"})
         reasons.append("REMINDER"); ds["last_reminder"] = t.isoformat()
