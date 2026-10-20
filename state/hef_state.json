@@ -1474,6 +1474,32 @@
    "status_code": "available",
    "total": 1929.81
   },
+  "susannadijk-141": {
+   "address": "Susannadijk 141",
+   "bedrooms": 2,
+   "first_seen": "2026-10-20T20:05:20+02:00",
+   "p": "hef",
+   "published": "2026-10-20T09:22:53.000000Z",
+   "rent": 960,
+   "rooms": 3,
+   "service": 61,
+   "status": "Beschikbaar",
+   "status_code": "available",
+   "total": 1021
+  },
+  "susannadijk-71": {
+   "address": "Susannadijk 71",
+   "bedrooms": 2,
+   "first_seen": "2026-10-20T20:05:20+02:00",
+   "p": "hef",
+   "published": "2026-10-20T09:50:19.000000Z",
+   "rent": 1000,
+   "rooms": 3,
+   "service": 61,
+   "status": "Beschikbaar",
+   "status_code": "available",
+   "total": 1061
+  },
   "vbt:rotterdam-brede-hilledijk-184": {
    "address": "Brede Hilledijk 184",
    "first_seen": "2026-10-18T15:43:36+02:00",
