@@ -2297,11 +2297,9 @@
    "last_status": "ok"
   },
   "ikwilhuren": {
-   "alerted": false,
-   "consecutive_failures": 1,
-   "failing_since": "2026-10-20T08:00:56+02:00",
+   "consecutive_failures": 0,
    "last_error": "fetch failed after 2 attempts: HTTPError: HTTP Error 521: <none>",
-   "last_status": "error"
+   "last_status": "ok"
   },
   "schep": {
    "consecutive_failures": 0,
