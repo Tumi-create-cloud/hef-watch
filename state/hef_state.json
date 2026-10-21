@@ -1505,6 +1505,7 @@
    "address": "Brede Hilledijk 184",
    "first_seen": "2026-10-18T15:43:36+02:00",
    "p": "vbt",
+   "removed": "2026-10-21T16:12:05+02:00",
    "rent": 2376,
    "rooms": 4,
    "service": 90,
@@ -1552,14 +1553,15 @@
    "rent": 1844,
    "rooms": 3,
    "service": 90,
-   "status": "Onder optie",
-   "status_code": "option",
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "rentreserved",
    "total": 1934
   },
   "vbt:rotterdam-brede-hilledijk-288": {
    "address": "Brede Hilledijk 288",
    "first_seen": "2026-10-18T15:43:36+02:00",
    "p": "vbt",
+   "removed": "2026-10-21T16:12:05+02:00",
    "rent": 1816,
    "rooms": 3,
    "service": 90,
@@ -1648,6 +1650,7 @@
    "address": "Maashavenweg 110",
    "first_seen": "2026-10-18T15:43:36+02:00",
    "p": "vbt",
+   "removed": "2026-10-21T16:12:05+02:00",
    "rent": 1897,
    "rooms": 3,
    "service": 82,
@@ -1670,6 +1673,7 @@
    "address": "Maashavenweg 58",
    "first_seen": "2026-10-18T15:43:36+02:00",
    "p": "vbt",
+   "removed": "2026-10-21T16:12:05+02:00",
    "rent": 1910,
    "rooms": 3,
    "service": 82,
@@ -2345,21 +2349,21 @@
   },
   "hef": {
    "alerted": true,
-   "consecutive_failures": 39,
+   "consecutive_failures": 40,
    "failing_since": "2026-10-21T13:09:53+02:00",
    "last_error": "fetch failed after 3 attempts: URLError: <urlopen error timed out>",
    "last_status": "error"
   },
   "ikwilhuren": {
    "alerted": true,
-   "consecutive_failures": 58,
+   "consecutive_failures": 59,
    "failing_since": "2026-10-21T11:29:53+02:00",
-   "last_error": "fetch failed after 2 attempts: TimeoutError: The read operation timed out",
+   "last_error": "fetch failed after 2 attempts: HTTPError: HTTP Error 522: <none>",
    "last_status": "error"
   },
   "schep": {
    "alerted": true,
-   "consecutive_failures": 30,
+   "consecutive_failures": 31,
    "failing_since": "2026-10-21T13:13:53+02:00",
    "last_error": "fetch failed after 2 attempts: HTTPError: HTTP Error 522: <none>",
    "last_status": "error"
