@@ -39,6 +39,6 @@ jobs:
           MATCH_CONFIG: ${{ secrets.MATCH_CONFIG }}
           WEBHOOK_URL: ${{ secrets.HEF_WEBHOOK_URL }}
           WEBHOOK_KEY: ${{ secrets.HEF_WEBHOOK_KEY }}
-          INTERVAL: '120'
+          INTERVAL: '100'
           LOOP_SECONDS: ${{ github.event.inputs.loop_seconds || '19800' }}
         run: ./loop.sh
