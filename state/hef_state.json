@@ -2345,21 +2345,21 @@
   },
   "hef": {
    "alerted": true,
-   "consecutive_failures": 22,
+   "consecutive_failures": 23,
    "failing_since": "2026-10-21T13:09:53+02:00",
    "last_error": "fetch failed after 3 attempts: URLError: <urlopen error timed out>",
    "last_status": "error"
   },
   "ikwilhuren": {
    "alerted": true,
-   "consecutive_failures": 41,
+   "consecutive_failures": 42,
    "failing_since": "2026-10-21T11:29:53+02:00",
-   "last_error": "fetch failed after 2 attempts: HTTPError: HTTP Error 522: <none>",
+   "last_error": "fetch failed after 2 attempts: TimeoutError: The read operation timed out",
    "last_status": "error"
   },
   "schep": {
    "alerted": true,
-   "consecutive_failures": 13,
+   "consecutive_failures": 14,
    "failing_since": "2026-10-21T13:13:53+02:00",
    "last_error": "fetch failed after 2 attempts: HTTPError: HTTP Error 522: <none>",
    "last_status": "error"
