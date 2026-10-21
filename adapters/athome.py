@@ -2,7 +2,7 @@
 12 per page (~145 KB), currently 2 pages, so every ~4 min. Bedrooms only; price often excl. service costs."""
 from .common import get_json, listing, num
 
-KEY, NAME, PREFIX, EVERY_S = "athome", "At Home Vastgoed", "athome:", 240
+KEY, NAME, PREFIX, EVERY_S = "athome", "At Home Vastgoed", "athome:", 300
 BASE = "https://athomevastgoed.nl"
 AVAILABLE = {"new", "active", "available"}
 

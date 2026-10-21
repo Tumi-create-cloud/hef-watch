@@ -5,7 +5,7 @@ One request around Rotterdam centre (radius 15 km, ~150 KB), filtered on city ->
 The price is the bare rent (service costs only on the detail page) -> service = unknown."""
 from .common import post_json, listing, num
 
-KEY, NAME, PREFIX, EVERY_S = "vesteda", "Vesteda", "vesteda:", 240
+KEY, NAME, PREFIX, EVERY_S = "vesteda", "Vesteda", "vesteda:", 300
 BASE = "https://www.vesteda.com"
 CITY = "rotterdam"
 QUERY = {"filters": [], "latitude": 51.922896, "longitude": 4.463173, "place": "Rotterdam", "placeType": 1,

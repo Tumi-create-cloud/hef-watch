@@ -3,7 +3,7 @@ server-side filtered on city. One light request per check."""
 import re
 from .common import post_json, listing
 
-KEY, NAME, PREFIX, EVERY_S = "vbt", "VBT Verhuurmakelaars", "vbt:", 120
+KEY, NAME, PREFIX, EVERY_S = "vbt", "VBT Verhuurmakelaars", "vbt:", 300
 BASE = "https://vbtverhuurmakelaars.nl"
 CITY = "Rotterdam"
 STATUS = {"available": "Beschikbaar", "option": "Onder optie", "rentreserved": "Verhuurd onder voorbehoud",

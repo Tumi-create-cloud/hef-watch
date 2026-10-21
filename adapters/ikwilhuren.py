@@ -5,7 +5,7 @@ The card price is the bare rent (service costs only on the detail page) -> servi
 import html as htmlmod, json, re
 from .common import request, listing, num
 
-KEY, NAME, PREFIX, EVERY_S = "ikwilhuren", "Ik wil huren (MVGM)", "ikwilhuren:", 240
+KEY, NAME, PREFIX, EVERY_S = "ikwilhuren", "Ik wil huren (MVGM)", "ikwilhuren:", 300
 BASE = "https://ikwilhuren.nu"
 CITY = "rotterdam"
 

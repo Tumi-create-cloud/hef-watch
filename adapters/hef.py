@@ -3,7 +3,7 @@ Slugs are unprefixed (legacy state)."""
 import html as htmlmod, json, re, subprocess
 from .common import request, listing, num
 
-KEY, NAME, PREFIX, EVERY_S = "hef", "Hef Wonen", "", 120
+KEY, NAME, PREFIX, EVERY_S = "hef", "Hef Wonen", "", 300
 URL = "https://huuraanbod.hefwonen.nl/huuraanbod"
 
 NODE_JS = r"""
