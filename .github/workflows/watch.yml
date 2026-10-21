@@ -10,6 +10,7 @@ on:
         default: '19800'
 permissions:
   contents: write
+  actions: write
 concurrency:
   group: watch
   cancel-in-progress: false   # never kill the active loop; GitHub keeps max 1 pending run
@@ -24,6 +25,15 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - name: Clean up old runs (older than 24 h)
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cutoff=$(date -u -d '24 hours ago' +%Y-%m-%dT%H:%M:%SZ)
+          gh api "repos/${{ github.repository }}/actions/runs?status=completed&per_page=100" --paginate \
+            --jq ".workflow_runs[] | select(.created_at < \"$cutoff\") | .id" |
+          while read id; do gh api -X DELETE "repos/${{ github.repository }}/actions/runs/$id" >/dev/null || true; done
       - name: Watch loop
         env:
           MATCH_CONFIG: ${{ secrets.MATCH_CONFIG }}
