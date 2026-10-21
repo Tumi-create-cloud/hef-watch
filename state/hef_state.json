@@ -1733,8 +1733,8 @@
    "first_seen": "2026-10-18T17:15:35+02:00",
    "p": "vesteda",
    "rent": 2135.0,
-   "status": "Verhuurd onder voorbehoud",
-   "status_code": "rented_reserved"
+   "status": "Verhuurd",
+   "status_code": "rented"
   },
   "vesteda:11571": {
    "address": "Van Der Hoevenplein 117",
