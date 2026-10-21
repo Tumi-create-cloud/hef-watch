@@ -1483,8 +1483,8 @@
    "rent": 960,
    "rooms": 3,
    "service": 61,
-   "status": "Beschikbaar",
-   "status_code": "available",
+   "status": "Onder optie",
+   "status_code": "unavailable",
    "total": 1021
   },
   "susannadijk-71": {
@@ -1496,8 +1496,8 @@
    "rent": 1000,
    "rooms": 3,
    "service": 61,
-   "status": "Beschikbaar",
-   "status_code": "available",
+   "status": "Onder optie",
+   "status_code": "unavailable",
    "total": 1061
   },
   "vbt:rotterdam-brede-hilledijk-184": {
