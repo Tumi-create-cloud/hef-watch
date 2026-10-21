@@ -2345,7 +2345,7 @@
   },
   "hef": {
    "alerted": true,
-   "consecutive_failures": 9,
+   "consecutive_failures": 10,
    "failing_since": "2026-10-21T13:09:53+02:00",
    "last_error": "fetch failed after 3 attempts: URLError: <urlopen error timed out>",
    "last_status": "error"
