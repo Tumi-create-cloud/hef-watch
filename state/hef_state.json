@@ -613,8 +613,8 @@
    "first_seen": "2026-10-18T15:53:36+02:00",
    "p": "ikwilhuren",
    "rent": 1250,
-   "status": "Gereserveerd",
-   "status_code": "gereserveerd"
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
   },
   "ikwilhuren:6e15b9e5c6fedcd9bf9c1753e6c8f195": {
    "address": "Mia Van Ijperenplein 221",
@@ -718,16 +718,16 @@
    "first_seen": "2026-10-18T15:53:36+02:00",
    "p": "ikwilhuren",
    "rent": 1425,
-   "status": "Gereserveerd",
-   "status_code": "gereserveerd"
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
   },
   "ikwilhuren:90781503dc5b10ee22e520f8a88d2c44": {
    "address": "Hoge Filterweg 638",
    "first_seen": "2026-10-18T15:53:36+02:00",
    "p": "ikwilhuren",
    "rent": 1200,
-   "status": "Gereserveerd",
-   "status_code": "gereserveerd"
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
   },
   "ikwilhuren:90d41b17c9883ddca84cf37a62e2df12": {
    "address": "Van Oldenbarneveltplaats 24A",
