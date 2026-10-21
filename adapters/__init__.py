@@ -2,4 +2,5 @@
 fetch() -> (listings, source, partial, warnings), using common.listing(); then add it to ADAPTERS."""
 from . import hef, vbt, schep, athome, ikwilhuren, vesteda
 
-ADAPTERS = [hef, vbt, schep, athome, ikwilhuren, vesteda]
+# Gepauzeerd 21-10-2026 op verzoek van Tum (sites plat): hef, schep, ikwilhuren
+ADAPTERS = [vbt, athome, vesteda]
