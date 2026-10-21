@@ -2348,8 +2348,8 @@
    "last_status": "ok"
   },
   "ikwilhuren": {
-   "alerted": false,
-   "consecutive_failures": 4,
+   "alerted": true,
+   "consecutive_failures": 5,
    "failing_since": "2026-10-21T11:29:53+02:00",
    "last_error": "fetch failed after 2 attempts: TimeoutError: The read operation timed out",
    "last_status": "error"
