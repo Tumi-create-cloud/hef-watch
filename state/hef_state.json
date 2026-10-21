@@ -2344,13 +2344,15 @@
    "last_status": "ok"
   },
   "hef": {
-   "consecutive_failures": 0,
+   "alerted": false,
+   "consecutive_failures": 1,
+   "failing_since": "2026-10-21T13:09:53+02:00",
    "last_error": "0 listings parsed",
-   "last_status": "ok"
+   "last_status": "error"
   },
   "ikwilhuren": {
    "alerted": true,
-   "consecutive_failures": 25,
+   "consecutive_failures": 26,
    "failing_since": "2026-10-21T11:29:53+02:00",
    "last_error": "fetch failed after 2 attempts: TimeoutError: The read operation timed out",
    "last_status": "error"
