@@ -2345,14 +2345,14 @@
   },
   "hef": {
    "alerted": true,
-   "consecutive_failures": 13,
+   "consecutive_failures": 14,
    "failing_since": "2026-10-21T13:09:53+02:00",
    "last_error": "fetch failed after 3 attempts: URLError: <urlopen error timed out>",
    "last_status": "error"
   },
   "ikwilhuren": {
    "alerted": true,
-   "consecutive_failures": 32,
+   "consecutive_failures": 33,
    "failing_since": "2026-10-21T11:29:53+02:00",
    "last_error": "fetch failed after 2 attempts: HTTPError: HTTP Error 522: <none>",
    "last_status": "error"
