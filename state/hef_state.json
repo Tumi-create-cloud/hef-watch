@@ -2345,7 +2345,7 @@
   },
   "hef": {
    "alerted": false,
-   "consecutive_failures": 5,
+   "consecutive_failures": 6,
    "failing_since": "2026-10-21T13:09:53+02:00",
    "last_error": "0 listings parsed",
    "last_status": "error"
@@ -2359,9 +2359,9 @@
   },
   "schep": {
    "alerted": false,
-   "consecutive_failures": 1,
+   "consecutive_failures": 2,
    "failing_since": "2026-10-21T13:13:53+02:00",
-   "last_error": "fetch failed after 2 attempts: HTTPError: HTTP Error 403: Forbidden",
+   "last_error": "fetch failed after 2 attempts: HTTPError: HTTP Error 522: <none>",
    "last_status": "error"
   },
   "vbt": {
