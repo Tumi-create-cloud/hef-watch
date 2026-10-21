@@ -2347,9 +2347,11 @@
    "last_status": "ok"
   },
   "ikwilhuren": {
-   "consecutive_failures": 0,
-   "last_error": "fetch failed after 2 attempts: HTTPError: HTTP Error 521: <none>",
-   "last_status": "ok"
+   "alerted": false,
+   "consecutive_failures": 1,
+   "failing_since": "2026-10-21T11:29:53+02:00",
+   "last_error": "fetch failed after 2 attempts: TimeoutError: The read operation timed out",
+   "last_status": "error"
   },
   "schep": {
    "consecutive_failures": 0,
