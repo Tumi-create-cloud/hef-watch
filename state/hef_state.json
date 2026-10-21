@@ -283,6 +283,7 @@
    "first_seen": "2026-10-17T11:26:16+02:00",
    "p": "hef",
    "published": "2026-10-14T14:15:53.000000Z",
+   "removed": "2026-10-21T13:05:53+02:00",
    "rent": 155.1,
    "rooms": null,
    "service": 0,
@@ -2349,7 +2350,7 @@
   },
   "ikwilhuren": {
    "alerted": true,
-   "consecutive_failures": 24,
+   "consecutive_failures": 25,
    "failing_since": "2026-10-21T11:29:53+02:00",
    "last_error": "fetch failed after 2 attempts: TimeoutError: The read operation timed out",
    "last_status": "error"
@@ -2361,7 +2362,7 @@
   },
   "vbt": {
    "alerted": false,
-   "consecutive_failures": 1,
+   "consecutive_failures": 2,
    "failing_since": "2026-10-21T13:03:53+02:00",
    "last_error": "fetch failed after 2 attempts: TimeoutError: The read operation timed out",
    "last_status": "error"
