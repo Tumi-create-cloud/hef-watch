@@ -1086,12 +1086,12 @@
    "bedrooms": 3,
    "first_seen": "2026-10-18T15:43:36+02:00",
    "p": "schep",
-   "published": "2026-10-20T10:10:45.000000Z",
+   "published": "2026-10-21T10:08:52.000000Z",
    "rent": 1980,
    "rooms": 4,
    "service": 32,
-   "status": "Beschikbaar",
-   "status_code": "available",
+   "status": "Onder optie",
+   "status_code": "unavailable",
    "total": 2012
   },
   "schep:burgemeester-van-walsumweg-nieuwehaven-153": {
@@ -1362,7 +1362,7 @@
    "bedrooms": 1,
    "first_seen": "2026-10-18T15:43:36+02:00",
    "p": "schep",
-   "published": "2026-10-08T16:08:43.000000Z",
+   "published": "2026-10-21T10:08:34.000000Z",
    "rent": 1318,
    "rooms": 2,
    "service": 50,
@@ -1388,7 +1388,7 @@
    "bedrooms": 1,
    "first_seen": "2026-10-18T15:43:36+02:00",
    "p": "schep",
-   "published": "2026-10-08T17:09:20.000000Z",
+   "published": "2026-10-21T10:08:34.000000Z",
    "rent": 1490,
    "rooms": 2,
    "service": 50,
@@ -2349,7 +2349,7 @@
   },
   "ikwilhuren": {
    "alerted": true,
-   "consecutive_failures": 11,
+   "consecutive_failures": 12,
    "failing_since": "2026-10-21T11:29:53+02:00",
    "last_error": "fetch failed after 2 attempts: TimeoutError: The read operation timed out",
    "last_status": "error"
