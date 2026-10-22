@@ -1505,6 +1505,7 @@
    "address": "Brede Hilledijk 184",
    "first_seen": "2026-10-18T15:43:36+02:00",
    "p": "vbt",
+   "removed": "2026-10-22T16:08:05+02:00",
    "rent": 2376,
    "rooms": 4,
    "service": 90,
@@ -1549,6 +1550,7 @@
    "address": "Brede Hilledijk 278",
    "first_seen": "2026-10-18T15:43:36+02:00",
    "p": "vbt",
+   "removed": "2026-10-22T16:08:05+02:00",
    "rent": 1844,
    "rooms": 3,
    "service": 90,
@@ -1560,6 +1562,7 @@
    "address": "Brede Hilledijk 288",
    "first_seen": "2026-10-18T15:43:36+02:00",
    "p": "vbt",
+   "removed": "2026-10-22T16:08:05+02:00",
    "rent": 1816,
    "rooms": 3,
    "service": 90,
@@ -1588,6 +1591,17 @@
    "status": "Onder optie",
    "status_code": "option",
    "total": 2077
+  },
+  "vbt:rotterdam-brede-hilledijk-400a": {
+   "address": "Brede Hilledijk 400 A",
+   "first_seen": "2026-10-22T16:08:05+02:00",
+   "p": "vbt",
+   "rent": 2014,
+   "rooms": 4,
+   "service": 110,
+   "status": "Beschikbaar",
+   "status_code": "available",
+   "total": 2124
   },
   "vbt:rotterdam-brede-hilledijk-428b": {
    "address": "Brede Hilledijk 428 B",
@@ -1648,6 +1662,7 @@
    "address": "Maashavenweg 110",
    "first_seen": "2026-10-18T15:43:36+02:00",
    "p": "vbt",
+   "removed": "2026-10-22T16:08:05+02:00",
    "rent": 1897,
    "rooms": 3,
    "service": 82,
@@ -1670,6 +1685,7 @@
    "address": "Maashavenweg 58",
    "first_seen": "2026-10-18T15:43:36+02:00",
    "p": "vbt",
+   "removed": "2026-10-22T16:08:05+02:00",
    "rent": 1910,
    "rooms": 3,
    "service": 82,
@@ -2366,11 +2382,9 @@
    "last_status": "error"
   },
   "vbt": {
-   "alerted": false,
-   "consecutive_failures": 1,
-   "failing_since": "2026-10-22T16:03:04+02:00",
+   "consecutive_failures": 0,
    "last_error": "fetch failed after 2 attempts: TimeoutError: The read operation timed out",
-   "last_status": "error"
+   "last_status": "ok"
   },
   "vesteda": {
    "consecutive_failures": 0,
