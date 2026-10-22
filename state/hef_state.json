@@ -2366,11 +2366,9 @@
    "last_status": "error"
   },
   "vbt": {
-   "alerted": false,
-   "consecutive_failures": 1,
-   "failing_since": "2026-10-22T12:03:04+02:00",
+   "consecutive_failures": 0,
    "last_error": "fetch failed after 2 attempts: TimeoutError: The read operation timed out",
-   "last_status": "error"
+   "last_status": "ok"
   },
   "vesteda": {
    "consecutive_failures": 0,
