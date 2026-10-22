@@ -2345,9 +2345,11 @@
  },
  "platform_health": {
   "athome": {
-   "consecutive_failures": 0,
+   "alerted": false,
+   "consecutive_failures": 1,
+   "failing_since": "2026-10-22T08:09:28+02:00",
    "last_error": "fetch failed after 2 attempts: HTTPError: HTTP Error 502: Bad Gateway",
-   "last_status": "ok"
+   "last_status": "error"
   },
   "hef": {
    "alerted": true,
