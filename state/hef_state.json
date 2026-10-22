@@ -427,8 +427,8 @@
    "first_seen": "2026-10-18T15:53:36+02:00",
    "p": "ikwilhuren",
    "rent": 1433,
-   "status": "Verhuurd onder voorbehoud",
-   "status_code": "verhuurd onder voorbehoud"
+   "status": "Verhuurd",
+   "status_code": "verhuurd"
   },
   "ikwilhuren:292e6711f6013a84d0502b9679a2fab0": {
    "address": "Laan op Zuid 1204",
@@ -604,6 +604,7 @@
    "bedrooms": 1,
    "first_seen": "2026-10-18T15:53:36+02:00",
    "p": "ikwilhuren",
+   "removed": "2026-10-22T16:59:44+02:00",
    "rent": 1643,
    "status": "Verhuurd",
    "status_code": "verhuurd"
@@ -675,6 +676,7 @@
    "bedrooms": 1,
    "first_seen": "2026-10-18T15:53:36+02:00",
    "p": "ikwilhuren",
+   "removed": "2026-10-22T16:59:44+02:00",
    "rent": 1450,
    "status": "Verhuurd",
    "status_code": "verhuurd"
@@ -799,14 +801,15 @@
    "first_seen": "2026-10-18T15:53:36+02:00",
    "p": "ikwilhuren",
    "rent": 1580,
-   "status": "Verhuurd onder voorbehoud",
-   "status_code": "verhuurd onder voorbehoud"
+   "status": "Verhuurd",
+   "status_code": "verhuurd"
   },
   "ikwilhuren:a68f928ce45608d0189688b42c6cefd8": {
    "address": "Louis Pregerkade 178",
    "bedrooms": 3,
    "first_seen": "2026-10-18T15:53:36+02:00",
    "p": "ikwilhuren",
+   "removed": "2026-10-22T16:59:44+02:00",
    "rent": 1591,
    "status": "Verhuurd",
    "status_code": "verhuurd"
@@ -935,6 +938,14 @@
    "status": "Verhuurd onder voorbehoud",
    "status_code": "verhuurd onder voorbehoud"
   },
+  "ikwilhuren:e32b905ea7ef0ef0139b16c506072588": {
+   "address": "Mia Van Ijperenplein 22",
+   "first_seen": "2026-10-22T16:59:44+02:00",
+   "p": "ikwilhuren",
+   "rent": 1784,
+   "status": "Te huur",
+   "status_code": "available"
+  },
   "ikwilhuren:e36cbce311f86963776a61fb5c328374": {
    "address": "Van Der Hoevenplein 297",
    "bedrooms": 1,
@@ -968,14 +979,15 @@
    "first_seen": "2026-10-18T15:53:36+02:00",
    "p": "ikwilhuren",
    "rent": 1990,
-   "status": "Verhuurd onder voorbehoud",
-   "status_code": "verhuurd onder voorbehoud"
+   "status": "Gereserveerd",
+   "status_code": "gereserveerd"
   },
   "ikwilhuren:ec03928dfbda98a3e20d7dc1ca676dd0": {
    "address": "Lenny Tristanostraat 15",
    "bedrooms": 3,
    "first_seen": "2026-10-18T15:53:36+02:00",
    "p": "ikwilhuren",
+   "removed": "2026-10-22T16:59:44+02:00",
    "rent": 1609,
    "status": "Verhuurd",
    "status_code": "verhuurd"
@@ -2362,24 +2374,20 @@
   },
   "hef": {
    "alerted": true,
-   "consecutive_failures": 47,
+   "consecutive_failures": 48,
    "failing_since": "2026-10-21T13:09:53+02:00",
-   "last_error": "fetch failed after 3 attempts: URLError: <urlopen error timed out>",
+   "last_error": "fetch failed after 3 attempts: HTTPError: HTTP Error 500: Internal Server Error",
    "last_status": "error"
   },
   "ikwilhuren": {
-   "alerted": true,
-   "consecutive_failures": 66,
-   "failing_since": "2026-10-21T11:29:53+02:00",
+   "consecutive_failures": 0,
    "last_error": "fetch failed after 2 attempts: TimeoutError: The read operation timed out",
-   "last_status": "error"
+   "last_status": "ok"
   },
   "schep": {
-   "alerted": true,
-   "consecutive_failures": 38,
-   "failing_since": "2026-10-21T13:13:53+02:00",
+   "consecutive_failures": 0,
    "last_error": "fetch failed after 2 attempts: HTTPError: HTTP Error 522: <none>",
-   "last_status": "error"
+   "last_status": "ok"
   },
   "vbt": {
    "consecutive_failures": 0,
