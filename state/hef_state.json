@@ -1505,7 +1505,6 @@
    "address": "Brede Hilledijk 184",
    "first_seen": "2026-10-18T15:43:36+02:00",
    "p": "vbt",
-   "removed": "2026-10-22T04:10:56+02:00",
    "rent": 2376,
    "rooms": 4,
    "service": 90,
@@ -1550,7 +1549,6 @@
    "address": "Brede Hilledijk 278",
    "first_seen": "2026-10-18T15:43:36+02:00",
    "p": "vbt",
-   "removed": "2026-10-22T04:10:56+02:00",
    "rent": 1844,
    "rooms": 3,
    "service": 90,
@@ -1562,7 +1560,6 @@
    "address": "Brede Hilledijk 288",
    "first_seen": "2026-10-18T15:43:36+02:00",
    "p": "vbt",
-   "removed": "2026-10-22T04:10:56+02:00",
    "rent": 1816,
    "rooms": 3,
    "service": 90,
@@ -1651,7 +1648,6 @@
    "address": "Maashavenweg 110",
    "first_seen": "2026-10-18T15:43:36+02:00",
    "p": "vbt",
-   "removed": "2026-10-22T04:10:56+02:00",
    "rent": 1897,
    "rooms": 3,
    "service": 82,
@@ -1674,7 +1670,6 @@
    "address": "Maashavenweg 58",
    "first_seen": "2026-10-18T15:43:36+02:00",
    "p": "vbt",
-   "removed": "2026-10-22T04:10:56+02:00",
    "rent": 1910,
    "rooms": 3,
    "service": 82,
@@ -2371,11 +2366,9 @@
    "last_status": "error"
   },
   "vbt": {
-   "alerted": false,
-   "consecutive_failures": 1,
-   "failing_since": "2026-10-22T10:04:28+02:00",
+   "consecutive_failures": 0,
    "last_error": "fetch failed after 2 attempts: TimeoutError: The read operation timed out",
-   "last_status": "error"
+   "last_status": "ok"
   },
   "vesteda": {
    "consecutive_failures": 0,
