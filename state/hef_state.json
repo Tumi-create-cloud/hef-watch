@@ -2149,6 +2149,7 @@
    "bedrooms": 2,
    "first_seen": "2026-10-18T17:15:35+02:00",
    "p": "vesteda",
+   "removed": "2026-10-22T07:34:28+02:00",
    "rent": 1415.0,
    "status": "Te huur",
    "status_code": "available"
