@@ -1731,8 +1731,8 @@
    "first_seen": "2026-10-18T17:15:35+02:00",
    "p": "vesteda",
    "rent": 1605.0,
-   "status": "Gereserveerd",
-   "status_code": "reserved"
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "rented_reserved"
   },
   "vesteda:10885": {
    "address": "Damastroos 27",
@@ -2021,8 +2021,8 @@
    "first_seen": "2026-10-18T17:15:35+02:00",
    "p": "vesteda",
    "rent": 1060.0,
-   "status": "Te huur",
-   "status_code": "available"
+   "status": "Gereserveerd",
+   "status_code": "reserved"
   },
   "vesteda:186080": {
    "address": "Grote Beer 13 A-17",
@@ -2374,7 +2374,7 @@
   },
   "hef": {
    "alerted": true,
-   "consecutive_failures": 84,
+   "consecutive_failures": 85,
    "failing_since": "2026-10-21T13:09:53+02:00",
    "last_error": "fetch failed after 3 attempts: HTTPError: HTTP Error 500: Internal Server Error",
    "last_status": "error"
