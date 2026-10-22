@@ -2191,8 +2191,8 @@
    "first_seen": "2026-10-18T17:15:35+02:00",
    "p": "vesteda",
    "rent": 2080.0,
-   "status": "Gereserveerd",
-   "status_code": "reserved"
+   "status": "Te huur",
+   "status_code": "available"
   },
   "vesteda:4290": {
    "address": "Admiraal De Ruyterweg 183",
