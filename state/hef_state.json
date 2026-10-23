@@ -27,7 +27,7 @@
    "first_seen": "2026-10-18T15:43:36+02:00",
    "p": "athome",
    "rent": 2695,
-   "status": "Nieuw",
+   "status": "Actief",
    "status_code": "available"
   },
   "athome:5217": {
@@ -45,7 +45,7 @@
    "first_seen": "2026-10-18T15:43:36+02:00",
    "p": "athome",
    "rent": 1950,
-   "status": "Nieuw",
+   "status": "Actief",
    "status_code": "available"
   },
   "athome:5428": {
@@ -108,7 +108,7 @@
    "first_seen": "2026-10-18T15:43:36+02:00",
    "p": "athome",
    "rent": 2400,
-   "status": "Nieuw",
+   "status": "Actief",
    "status_code": "available"
   },
   "athome:6421": {
@@ -175,7 +175,7 @@
    "first_seen": "2026-10-18T15:43:36+02:00",
    "p": "athome",
    "rent": 1112.5,
-   "status": "Nieuw",
+   "status": "Actief",
    "status_code": "available"
   },
   "bierstraat-113": {
@@ -2369,7 +2369,7 @@
   },
   "hef": {
    "alerted": true,
-   "consecutive_failures": 169,
+   "consecutive_failures": 170,
    "failing_since": "2026-10-21T13:09:53+02:00",
    "last_error": "fetch failed after 3 attempts: HTTPError: HTTP Error 500: Internal Server Error",
    "last_status": "error"
