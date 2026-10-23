@@ -1909,8 +1909,8 @@
    "first_seen": "2026-10-18T17:15:35+02:00",
    "p": "vesteda",
    "rent": 1885.0,
-   "status": "Gereserveerd",
-   "status_code": "reserved"
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "rented_reserved"
   },
   "vesteda:180851": {
    "address": "Laan Op Zuid 1894",
@@ -2374,7 +2374,7 @@
   },
   "hef": {
    "alerted": true,
-   "consecutive_failures": 442,
+   "consecutive_failures": 443,
    "failing_since": "2026-10-21T13:09:53+02:00",
    "last_error": "fetch failed after 3 attempts: HTTPError: HTTP Error 500: Internal Server Error",
    "last_status": "error"
