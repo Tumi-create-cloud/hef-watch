@@ -2378,7 +2378,7 @@
   },
   "hef": {
    "alerted": true,
-   "consecutive_failures": 242,
+   "consecutive_failures": 243,
    "failing_since": "2026-10-21T13:09:53+02:00",
    "last_error": "fetch failed after 3 attempts: HTTPError: HTTP Error 500: Internal Server Error",
    "last_status": "error"
@@ -2394,11 +2394,9 @@
    "last_status": "ok"
   },
   "vbt": {
-   "alerted": false,
-   "consecutive_failures": 1,
-   "failing_since": "2026-10-23T09:03:53+02:00",
+   "consecutive_failures": 0,
    "last_error": "fetch failed after 2 attempts: TimeoutError: The read operation timed out",
-   "last_status": "error"
+   "last_status": "ok"
   },
   "vesteda": {
    "consecutive_failures": 0,
