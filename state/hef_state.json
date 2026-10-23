@@ -865,8 +865,8 @@
    "first_seen": "2026-10-18T15:53:36+02:00",
    "p": "ikwilhuren",
    "rent": 1324,
-   "status": "Te huur",
-   "status_code": "available"
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
   },
   "ikwilhuren:c21c1742f8e5c1761d662f718c4740be": {
    "address": "Karl Weisbardstraat 139",
@@ -2373,7 +2373,7 @@
   },
   "hef": {
    "alerted": true,
-   "consecutive_failures": 285,
+   "consecutive_failures": 286,
    "failing_since": "2026-10-21T13:09:53+02:00",
    "last_error": "fetch failed after 3 attempts: HTTPError: HTTP Error 500: Internal Server Error",
    "last_status": "error"
