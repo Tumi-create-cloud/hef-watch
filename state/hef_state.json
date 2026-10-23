@@ -1573,6 +1573,7 @@
    "address": "Brede Hilledijk 288",
    "first_seen": "2026-10-18T15:43:36+02:00",
    "p": "vbt",
+   "removed": "2026-10-24T00:09:32+02:00",
    "rent": 1816,
    "rooms": 3,
    "service": 90,
@@ -2373,7 +2374,7 @@
   },
   "hef": {
    "alerted": true,
-   "consecutive_failures": 423,
+   "consecutive_failures": 424,
    "failing_since": "2026-10-21T13:09:53+02:00",
    "last_error": "fetch failed after 3 attempts: HTTPError: HTTP Error 500: Internal Server Error",
    "last_status": "error"
