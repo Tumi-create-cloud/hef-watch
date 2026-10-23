@@ -2378,7 +2378,7 @@
   },
   "hef": {
    "alerted": true,
-   "consecutive_failures": 253,
+   "consecutive_failures": 254,
    "failing_since": "2026-10-21T13:09:53+02:00",
    "last_error": "fetch failed after 3 attempts: HTTPError: HTTP Error 500: Internal Server Error",
    "last_status": "error"
