@@ -1017,8 +1017,8 @@
    "first_seen": "2026-10-18T15:53:36+02:00",
    "p": "ikwilhuren",
    "rent": 1890,
-   "status": "Verhuurd onder voorbehoud",
-   "status_code": "verhuurd onder voorbehoud"
+   "status": "Verhuurd",
+   "status_code": "verhuurd"
   },
   "laan-op-zuid-663": {
    "address": "Laan op Zuid 663",
@@ -2373,7 +2373,7 @@
   },
   "hef": {
    "alerted": true,
-   "consecutive_failures": 308,
+   "consecutive_failures": 309,
    "failing_since": "2026-10-21T13:09:53+02:00",
    "last_error": "fetch failed after 3 attempts: HTTPError: HTTP Error 500: Internal Server Error",
    "last_status": "error"
