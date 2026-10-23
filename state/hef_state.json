@@ -892,8 +892,8 @@
    "first_seen": "2026-10-18T15:53:36+02:00",
    "p": "ikwilhuren",
    "rent": 1350,
-   "status": "Verhuurd onder voorbehoud",
-   "status_code": "verhuurd onder voorbehoud"
+   "status": "Verhuurd",
+   "status_code": "verhuurd"
   },
   "ikwilhuren:c3c728db96f8af0a911dd07733e36a20": {
    "address": "Cypruslaan 129",
@@ -2378,7 +2378,7 @@
   },
   "hef": {
    "alerted": true,
-   "consecutive_failures": 329,
+   "consecutive_failures": 330,
    "failing_since": "2026-10-21T13:09:53+02:00",
    "last_error": "fetch failed after 3 attempts: HTTPError: HTTP Error 500: Internal Server Error",
    "last_status": "error"
