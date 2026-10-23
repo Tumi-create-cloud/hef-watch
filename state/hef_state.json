@@ -453,8 +453,8 @@
    "first_seen": "2026-10-18T15:53:36+02:00",
    "p": "ikwilhuren",
    "rent": 2100,
-   "status": "Verhuurd onder voorbehoud",
-   "status_code": "verhuurd onder voorbehoud"
+   "status": "Verhuurd",
+   "status_code": "verhuurd"
   },
   "ikwilhuren:2ac3c61563a4b5d27d8a5ca4984ff230": {
    "address": "Wijnhaven 77C",
@@ -650,8 +650,8 @@
    "first_seen": "2026-10-18T15:53:36+02:00",
    "p": "ikwilhuren",
    "rent": 1471,
-   "status": "Verhuurd onder voorbehoud",
-   "status_code": "verhuurd onder voorbehoud"
+   "status": "Verhuurd",
+   "status_code": "verhuurd"
   },
   "ikwilhuren:776b0b1e6ebdd4a2ec8ac8aa317cb135": {
    "address": "Jufferstraat 13E",
@@ -2373,7 +2373,7 @@
   },
   "hef": {
    "alerted": true,
-   "consecutive_failures": 293,
+   "consecutive_failures": 294,
    "failing_since": "2026-10-21T13:09:53+02:00",
    "last_error": "fetch failed after 3 attempts: HTTPError: HTTP Error 500: Internal Server Error",
    "last_status": "error"
