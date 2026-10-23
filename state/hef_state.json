@@ -1976,6 +1976,7 @@
    "bedrooms": 1,
    "first_seen": "2026-10-18T17:15:35+02:00",
    "p": "vesteda",
+   "removed": "2026-10-23T05:48:53+02:00",
    "rent": 987.78,
    "status": "Verhuurd",
    "status_code": "rented"
@@ -2066,6 +2067,7 @@
    "bedrooms": 1,
    "first_seen": "2026-10-18T17:15:35+02:00",
    "p": "vesteda",
+   "removed": "2026-10-23T05:48:53+02:00",
    "rent": 1015.22,
    "status": "Verhuurd",
    "status_code": "rented"
@@ -2237,6 +2239,7 @@
    "bedrooms": 2,
    "first_seen": "2026-10-18T17:15:35+02:00",
    "p": "vesteda",
+   "removed": "2026-10-23T05:48:53+02:00",
    "rent": 1620.0,
    "status": "Verhuurd",
    "status_code": "rented"
@@ -2375,7 +2378,7 @@
   },
   "hef": {
    "alerted": true,
-   "consecutive_failures": 202,
+   "consecutive_failures": 203,
    "failing_since": "2026-10-21T13:09:53+02:00",
    "last_error": "fetch failed after 3 attempts: HTTPError: HTTP Error 500: Internal Server Error",
    "last_status": "error"
