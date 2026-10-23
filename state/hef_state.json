@@ -1881,8 +1881,8 @@
    "first_seen": "2026-10-18T17:15:35+02:00",
    "p": "vesteda",
    "rent": 1001.5,
-   "status": "Te huur",
-   "status_code": "available"
+   "status": "Gereserveerd",
+   "status_code": "reserved"
   },
   "vesteda:180632": {
    "address": "Grote Beer 3 J-01",
@@ -2373,7 +2373,7 @@
   },
   "hef": {
    "alerted": true,
-   "consecutive_failures": 259,
+   "consecutive_failures": 260,
    "failing_since": "2026-10-21T13:09:53+02:00",
    "last_error": "fetch failed after 3 attempts: HTTPError: HTTP Error 500: Internal Server Error",
    "last_status": "error"
