@@ -436,8 +436,8 @@
    "first_seen": "2026-10-18T15:53:36+02:00",
    "p": "ikwilhuren",
    "rent": 1750,
-   "status": "Gereserveerd",
-   "status_code": "gereserveerd"
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
   },
   "ikwilhuren:29d6b38133f8e88a9d8aa2c1060cdc68": {
    "address": "Samuel Soesmanstraat 102",
@@ -980,8 +980,8 @@
    "first_seen": "2026-10-18T15:53:36+02:00",
    "p": "ikwilhuren",
    "rent": 1990,
-   "status": "Gereserveerd",
-   "status_code": "gereserveerd"
+   "status": "Verhuurd onder voorbehoud",
+   "status_code": "verhuurd onder voorbehoud"
   },
   "ikwilhuren:ec03928dfbda98a3e20d7dc1ca676dd0": {
    "address": "Lenny Tristanostraat 15",
@@ -2373,7 +2373,7 @@
   },
   "hef": {
    "alerted": true,
-   "consecutive_failures": 298,
+   "consecutive_failures": 299,
    "failing_since": "2026-10-21T13:09:53+02:00",
    "last_error": "fetch failed after 3 attempts: HTTPError: HTTP Error 500: Internal Server Error",
    "last_status": "error"
