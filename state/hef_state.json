@@ -498,8 +498,8 @@
    "first_seen": "2026-10-18T15:53:36+02:00",
    "p": "ikwilhuren",
    "rent": 1775,
-   "status": "Verhuurd onder voorbehoud",
-   "status_code": "verhuurd onder voorbehoud"
+   "status": "Verhuurd",
+   "status_code": "verhuurd"
   },
   "ikwilhuren:3adf83556b01f27e1252bbba156e6789": {
    "address": "Laan Op Zuid 1583",
@@ -2378,7 +2378,7 @@
   },
   "hef": {
    "alerted": true,
-   "consecutive_failures": 331,
+   "consecutive_failures": 332,
    "failing_since": "2026-10-21T13:09:53+02:00",
    "last_error": "fetch failed after 3 attempts: HTTPError: HTTP Error 500: Internal Server Error",
    "last_status": "error"
