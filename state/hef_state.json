@@ -470,6 +470,7 @@
    "bedrooms": 2,
    "first_seen": "2026-10-18T15:53:36+02:00",
    "p": "ikwilhuren",
+   "removed": "2026-10-24T05:33:08+02:00",
    "rent": 2016,
    "status": "Verhuurd",
    "status_code": "verhuurd"
@@ -550,6 +551,7 @@
    "bedrooms": 2,
    "first_seen": "2026-10-18T15:53:36+02:00",
    "p": "ikwilhuren",
+   "removed": "2026-10-24T05:33:08+02:00",
    "rent": 1350,
    "status": "Verhuurd",
    "status_code": "verhuurd"
@@ -746,6 +748,7 @@
    "bedrooms": 2,
    "first_seen": "2026-10-18T15:53:36+02:00",
    "p": "ikwilhuren",
+   "removed": "2026-10-24T05:33:08+02:00",
    "rent": 1750,
    "status": "Verhuurd",
    "status_code": "verhuurd"
@@ -2378,7 +2381,7 @@
   },
   "hef": {
    "alerted": true,
-   "consecutive_failures": 488,
+   "consecutive_failures": 489,
    "failing_since": "2026-10-21T13:09:53+02:00",
    "last_error": "fetch failed after 3 attempts: HTTPError: HTTP Error 500: Internal Server Error",
    "last_status": "error"
