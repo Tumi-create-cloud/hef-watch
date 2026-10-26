@@ -1,13 +1,15 @@
 """Ik wil huren (MVGM): the site's map feed /aanbod/feed/projects.json holds ALL objects (NL-wide,
 ~1000) with lat/lng and the rendered card HTML (address, postcode, city, status, price, m2, bedrooms).
 One gzip request (~130 KB) per check, filtered client-side on city -> every ~4 min.
-The card price is the bare rent (service costs only on the detail page) -> service = unknown."""
+The card price is the bare rent (service costs only on the detail page) -> service = unknown, unless
+watch.py enriches a new, possibly matching listing via service() (1 detail fetch per listing, cached in state)."""
 import html as htmlmod, json, re
 from .common import request, listing, num
 
 KEY, NAME, PREFIX, EVERY_S = "ikwilhuren", "Ik wil huren (MVGM)", "ikwilhuren:", 300
 BASE = "https://ikwilhuren.nu"
 CITY = "rotterdam"
+DETAIL_PER_TICK = 3      # max detail-page fetches per check (watch.py)
 
 def _g(pat, s):
     m = re.search(pat, s, re.S)
@@ -43,3 +45,15 @@ def fetch():
     warn = [f"{unparsed} kaarten niet te parsen"] if unparsed > len(items) * 0.1 else []
     if not out: raise ValueError("0 Rotterdam listings in feed")
     return out, "map_feed_json", False, warn
+
+def parse_service(page):
+    """Detail page 'Servicekosten € 50,- /mnd' -> 50 (None if absent/unparseable)."""
+    td = _g(r'>\s*Servicekosten\s*</th>\s*<td[^>]*>(.*?)</td>', page)
+    m = re.search(r"€\s*(\d[\d.]*(?:,\d{1,2})?)", (td or "").replace("\xa0", " "))
+    return num(m.group(1).replace(".", "")) if m else None
+
+def service(l):
+    """One polite detail fetch (no retry) -> service costs; raises on failure so the caller keeps 'unknown'."""
+    v = parse_service(request(l["url"], attempts=1, timeout=12))
+    if v is None: raise ValueError("servicekosten niet gevonden")
+    return v

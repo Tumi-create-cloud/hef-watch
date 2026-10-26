@@ -99,6 +99,25 @@ def migrate(st):
     for p in st["listings"].values(): p.setdefault("p", "hef")
     return st
 
+DETAIL_TRIES = 2                 # detail fetch per listing: once, plus at most one retry on a later check
+DETAIL_FOR = dt.timedelta(hours=24)   # only for listings first seen this recently (never re-fetch old ones)
+DETAIL_DEADLINE_S = 55           # no detail fetches after this many seconds into the check (timeout 100 in loop.sh)
+
+def enrich_service(ad, l, p, cfg, budget, ts, t0):
+    """Adapters with service(): fill unknown service costs from the detail page, cached in state per listing.
+    Any failure keeps 'unknown' (twijfel) and stops detail fetches for this check; never touches platform health."""
+    if l.get("service") is None and p and p.get("detail_service") is not None:
+        l["service"] = p["detail_service"]
+    elif l.get("service") is None and budget > 0 and time.time() - t0 < DETAIL_DEADLINE_S \
+            and (p or {}).get("detail_tries", 0) < DETAIL_TRIES and match(l, cfg)[0] != "no" \
+            and (not p or (p.get("first_seen") and
+                         dt.datetime.fromisoformat(ts) - dt.datetime.fromisoformat(p["first_seen"]) < DETAIL_FOR)):
+        budget -= 1; l["detail_tries"] = (p or {}).get("detail_tries", 0) + 1
+        try: l["service"] = l["detail_service"] = ad.service(l)
+        except Exception: budget = 0
+    if l.get("service") is not None and isinstance(l.get("rent"), (int, float)): l["total"] = l["rent"] + l["service"]
+    return budget
+
 def run_platform(ad):
     t0 = time.time()
     try:
@@ -147,9 +166,11 @@ def watch(state_path, runtime_path, cfg, only=None, force=False):
         summary[ad.KEY] = {"n": len(listings), "src": source, "ok": not err, "s": secs}
         if not listings: continue
         first = ad.KEY not in st["seeded"]
-        known = st["listings"]; cur = set()
+        known = st["listings"]; cur = set(); budget = getattr(ad, "DETAIL_PER_TICK", 0)
         for l in listings:
-            s = l["slug"]; cur.add(s); lvl, why = match(l, cfg); p = known.get(s)
+            s = l["slug"]; cur.add(s); p = known.get(s)
+            if hasattr(ad, "service") and not first: budget = enrich_service(ad, l, p, cfg, budget, ts, t)
+            lvl, why = match(l, cfg)
             if p is None:
                 if not first:
                     note = "nieuw en beschikbaar" if available(l.get("status_code") or l.get("status")) else "nieuw, niet beschikbaar"
@@ -168,6 +189,8 @@ def watch(state_path, runtime_path, cfg, only=None, force=False):
                         and l.get("rent") is not None and p.get("rent") != l.get("rent"):
                     events.append(ev("PRICE_CHANGE", l, lvl, why, f"huur €{p.get('rent')} -> €{l.get('rent')}", ad.NAME))
             for k in ("last_seen", "match"): p.pop(k, None)
+            for k in ("detail_tries", "detail_service"):
+                if k in l: p[k] = l.pop(k)
             for k in STORED:
                 if l.get(k) is not None or k in p: p[k] = l.get(k)
         if first: st["seeded"].append(ad.KEY); summary[ad.KEY]["seeded"] = True
