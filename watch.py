@@ -100,7 +100,7 @@ def migrate(st):
     return st
 
 DETAIL_TRIES = 2                 # detail fetch per listing: once, plus at most one retry on a later check
-DETAIL_FOR = dt.timedelta(hours=24)   # only for listings first seen this recently (never re-fetch old ones)
+DETAIL_FOR = dt.timedelta(hours=24)   # retry window; listings known before this feature are never fetched
 DETAIL_DEADLINE_S = 55           # no detail fetches after this many seconds into the check (timeout 100 in loop.sh)
 
 def enrich_service(ad, l, p, cfg, budget, ts, t0):
@@ -108,11 +108,12 @@ def enrich_service(ad, l, p, cfg, budget, ts, t0):
     Any failure keeps 'unknown' (twijfel) and stops detail fetches for this check; never touches platform health."""
     if l.get("service") is None and p and p.get("detail_service") is not None:
         l["service"] = p["detail_service"]
-    elif l.get("service") is None and budget > 0 and time.time() - t0 < DETAIL_DEADLINE_S \
-            and (p or {}).get("detail_tries", 0) < DETAIL_TRIES and match(l, cfg)[0] != "no" \
-            and (not p or (p.get("first_seen") and
-                         dt.datetime.fromisoformat(ts) - dt.datetime.fromisoformat(p["first_seen"]) < DETAIL_FOR)):
-        budget -= 1; l["detail_tries"] = (p or {}).get("detail_tries", 0) + 1
+    elif l.get("service") is None and (p or {}).get("detail_tries", 0) < DETAIL_TRIES and match(l, cfg)[0] != "no" \
+            and (not p or ("detail_tries" in p and p.get("first_seen") and   # never for listings known before
+                           dt.datetime.fromisoformat(ts) - dt.datetime.fromisoformat(p["first_seen"]) < DETAIL_FOR)):
+        l["detail_tries"] = (p or {}).get("detail_tries", 0)      # 0 = deferred (cap/deadline), try next check
+        if budget <= 0 or time.time() - t0 >= DETAIL_DEADLINE_S: return budget
+        budget -= 1; l["detail_tries"] += 1
         try: l["service"] = l["detail_service"] = ad.service(l)
         except Exception: budget = 0
     if l.get("service") is not None and isinstance(l.get("rent"), (int, float)): l["total"] = l["rent"] + l["service"]
