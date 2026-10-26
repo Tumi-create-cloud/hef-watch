@@ -10,7 +10,11 @@ sync() {  # fetch latest (pending.json from the box) and replay local unpushed c
   for i in 1 2 3; do git pull -q --rebase --autostash origin main 2>/dev/null && return 0; git rebase --abort 2>/dev/null; sleep 2; done
   echo "warn: pull failed"; return 1
 }
+decrypt() {  # committed state/*.json.enc -> plaintext state/*.json that watch.py uses
+  tools/state_crypt.sh decrypt state || { echo "FATAL: state decrypt failed, stopping without touching state"; exit 1; }
+}
 commit_push() {
+  tools/state_crypt.sh encrypt state || { echo "FATAL: state encrypt failed, not committing"; exit 1; }
   git add state
   git diff --cached --quiet && return 0
   git commit -q -m "state update"
@@ -21,8 +25,11 @@ commit_push() {
   echo "warn: push failed, retry next iteration"
 }
 
+tools/state_crypt.sh check || { echo "FATAL: STATE_KEY secret missing"; exit 1; }
+
 # keepalive against GitHub's 60-day schedule disable
 sync
+decrypt
 if [ $(( $(date +%s) - $(git log -1 --format=%ct) )) -gt $((25*86400)) ]; then
   date -u +%Y-%m-%d > state/keepalive.txt; commit_push
 fi
@@ -31,6 +38,7 @@ end=$((SECONDS + LOOP_SECONDS)); n=0
 while [ $SECONDS -lt $end ]; do
   t0=$SECONDS; n=$((n+1))
   sync
+  decrypt
   printf 'iter %d %s ' "$n" "$(date -u +%H:%M:%SZ)"
   timeout 100 python3 watch.py --state-dir state || echo "warn: watch.py exit $?"
   commit_push

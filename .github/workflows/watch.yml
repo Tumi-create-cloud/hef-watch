@@ -37,6 +37,7 @@ jobs:
       - name: Watch loop
         env:
           MATCH_CONFIG: ${{ secrets.MATCH_CONFIG }}
+          STATE_KEY: ${{ secrets.STATE_KEY }}
           WEBHOOK_URL: ${{ secrets.HEF_WEBHOOK_URL }}
           WEBHOOK_KEY: ${{ secrets.HEF_WEBHOOK_KEY }}
           INTERVAL: '100'
