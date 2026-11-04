@@ -4,6 +4,8 @@ import re
 from .common import post_json, listing
 
 KEY, NAME, PREFIX, EVERY_S = "vbt", "VBT Verhuurmakelaars", "vbt:", 300
+HEALTH_ALERT_AFTER_S = 60 * 60   # VBT API is slow for a few minutes around every full hour; alert only after 1 h down
+SLOW = True                      # may take up to ~60 s; watch.py processes it after the other adapters
 BASE = "https://vbtverhuurmakelaars.nl"
 CITY = "Rotterdam"
 STATUS = {"available": "Beschikbaar", "option": "Onder optie", "rentreserved": "Verhuurd onder voorbehoud",
@@ -12,7 +14,7 @@ STATUS = {"available": "Beschikbaar", "option": "Onder optie", "rentreserved": "
 def fetch():
     out, page, pages = [], 1, 1
     while page <= pages and page <= 5:
-        d = post_json(f"{BASE}/api/properties/search", {"limit": 200, "page": page, "filter": {"city": CITY}}, timeout=30)
+        d = post_json(f"{BASE}/api/properties/search", {"limit": 200, "page": page, "filter": {"city": CITY}}, timeout=60, attempts=1)
         if "houses" not in d: raise ValueError("response without 'houses'")
         pages = d.get("pageCount") or 1
         for x in d["houses"]:

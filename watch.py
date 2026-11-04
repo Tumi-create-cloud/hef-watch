@@ -136,10 +136,14 @@ def watch(state_path, runtime_path, cfg, only=None, force=False):
     t = time.time()
     due = [a for a in ADAPTERS if (not only or a.KEY in only) and
            (force or t - rt.get(a.KEY, 0) >= a.EVERY_S - 20)]
-    with ThreadPoolExecutor(max_workers=len(due) or 1) as ex:
-        results = list(ex.map(run_platform, due))
+    ex = ThreadPoolExecutor(max_workers=len(due) or 1)
+    futs = [ex.submit(run_platform, a) for a in due]
+    # slow adapters (SLOW = True, e.g. VBT with a 60 s timeout) are processed last, so the other
+    # adapters' results and detail fetches (DETAIL_DEADLINE_S) are handled while they are still running
+    order = [f for a, f in zip(due, futs) if not getattr(a, "SLOW", False)] + \
+            [f for a, f in zip(due, futs) if getattr(a, "SLOW", False)]
     events, summary = [], {}
-    for ad, listings, source, partial, err, secs in results:
+    for ad, listings, source, partial, err, secs in (f.result() for f in order):
         rt[ad.KEY] = t
         h = st["platform_health"].setdefault(ad.KEY, {"consecutive_failures": 0})
         prev = h.get("consecutive_failures", 0)
@@ -149,7 +153,7 @@ def watch(state_path, runtime_path, cfg, only=None, force=False):
             if not prev: h["failing_since"] = ts; h["alerted"] = False
             h["consecutive_failures"] = prev + 1; h["last_status"] = "error"; h["last_error"] = err
             down_s = (dt.datetime.fromisoformat(ts) - dt.datetime.fromisoformat(h["failing_since"])).total_seconds()
-            alert = not h.get("alerted") and down_s >= HEALTH_ALERT_AFTER_S
+            alert = not h.get("alerted") and down_s >= getattr(ad, "HEALTH_ALERT_AFTER_S", HEALTH_ALERT_AFTER_S)
             if alert: h["alerted"] = True
             events.append({"type": "HEALTH", "platform": ad.NAME, "match": None, "first_failure": alert,
                            "down_min": round(down_s / 60), "since": h["failing_since"],
@@ -201,6 +205,7 @@ def watch(state_path, runtime_path, cfg, only=None, force=False):
                     p["removed"] = ts
                     events.append({"type": "REMOVED", "platform": ad.NAME, "match": None, "slug": s,
                                    "address": p.get("address"), "note": "niet meer op de site"})
+    ex.shutdown(wait=False)
     st["seeded"].sort()
     ok = all(v["ok"] for v in summary.values())
     hef = summary.get("hef", {})
